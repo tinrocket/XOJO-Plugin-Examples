@@ -8,7 +8,7 @@ The plugin is complete for macOS and contains an example project.
 
 ### TRMTKImageView
 
-A hybrid macOS and iOS Metal-based control that displays images. It's like NSImageView or UIImageView, but faster, and handles extremely large images. Can be used synced up with an NSScrollView or UIScrollView.
+A hybrid macOS and iOS Metal-based control for displaying images. It's like NSImageView or UIImageView, but faster, and handles extremely large images. Can be used synced up with an NSScrollView or UIScrollView.
 
 It works by displaying CIImage images directly to a Metal CALayer on the screen without using an intermediate memory buffer. It’s ideal for live video effects and real-time image processing.
 
