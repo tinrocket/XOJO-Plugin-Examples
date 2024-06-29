@@ -8,10 +8,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
-#define TARGET_OS_IPHONE 1
-#include "iOSPrefixHeader.h" // JBalestrieri added to allow compiling
-
 #include "REALplugin.h"
 #include "rb_plugin.h"
 

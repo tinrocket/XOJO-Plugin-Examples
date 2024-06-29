@@ -28,6 +28,7 @@
 		52B8845F2C30900D001CEB64 /* rb_plugin_cpp.h in Headers */ = {isa = PBXBuildFile; fileRef = 521A9DBB2C163C7B0041B0D7 /* rb_plugin_cpp.h */; };
 		52B884602C309036001CEB64 /* PluginMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 521A9DC72C163C7B0041B0D7 /* PluginMain.cpp */; };
 		52B884632C30A297001CEB64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B8841A2C2DB20A001CEB64 /* Foundation.framework */; };
+		52B884682C30ABC4001CEB64 /* PrefixHeader-iOS.pch in Headers */ = {isa = PBXBuildFile; fileRef = 52B884672C30ABC4001CEB64 /* PrefixHeader-iOS.pch */; };
 		52EE023F2C1795A500771DAA /* TRMetalImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 52EE023B2C1795A500771DAA /* TRMetalImageView.h */; };
 		52EE02402C1795A500771DAA /* TRMetalImageViewLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 52EE023C2C1795A500771DAA /* TRMetalImageViewLayer.h */; };
 		52EE02412C1795A500771DAA /* TRMetalImageViewLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EE023D2C1795A500771DAA /* TRMetalImageViewLayer.m */; };
@@ -61,6 +62,7 @@
 		52B8844E2C305BF4001CEB64 /* TRMetalImageView_XOJO_Plugin_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRMetalImageView_XOJO_Plugin_iOS.h; sourceTree = "<group>"; };
 		52B8844F2C305BF4001CEB64 /* TRMetalImageView_XOJO_Plugin_iOS.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = TRMetalImageView_XOJO_Plugin_iOS.docc; sourceTree = "<group>"; };
 		52B884552C3076A5001CEB64 /* CompleteModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CompleteModule.cpp; sourceTree = "<group>"; };
+		52B884672C30ABC4001CEB64 /* PrefixHeader-iOS.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PrefixHeader-iOS.pch"; sourceTree = "<group>"; };
 		52EE023B2C1795A500771DAA /* TRMetalImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMetalImageView.h; sourceTree = "<group>"; };
 		52EE023C2C1795A500771DAA /* TRMetalImageViewLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMetalImageViewLayer.h; sourceTree = "<group>"; };
 		52EE023D2C1795A500771DAA /* TRMetalImageViewLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMetalImageViewLayer.m; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		521A9CD42C163C500041B0D7 = {
 			isa = PBXGroup;
 			children = (
+				52B884672C30ABC4001CEB64 /* PrefixHeader-iOS.pch */,
 				521A9CDF2C163C500041B0D7 /* XOJO TRMetalImageView Plugin */,
 				521A9E6D2C1640DA0041B0D7 /* TRMetalImageView */,
 				521A9E6A2C163C840041B0D7 /* PluginSDK */,
@@ -223,6 +226,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52B884682C30ABC4001CEB64 /* PrefixHeader-iOS.pch in Headers */,
 				52B8845D2C308FEA001CEB64 /* REALplugin.h in Headers */,
 				52B884512C305BF4001CEB64 /* TRMetalImageView_XOJO_Plugin_iOS.h in Headers */,
 				52B884582C307FDB001CEB64 /* iOSPrefixHeader.h in Headers */,
@@ -500,6 +504,8 @@
 					"$(inherited)",
 					"$(SDKROOT)/System/iOSSupport/System/Library/Frameworks",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PrefixHeader-iOS.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -543,6 +549,8 @@
 					"$(inherited)",
 					"$(SDKROOT)/System/iOSSupport/System/Library/Frameworks",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PrefixHeader-iOS.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

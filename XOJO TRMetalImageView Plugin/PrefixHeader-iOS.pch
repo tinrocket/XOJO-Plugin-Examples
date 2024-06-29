@@ -1,0 +1,13 @@
+//
+//  PrefixHeader-iOS.pch
+//  XOJO TRMetalImageView Plugin
+//
+//  Created by John Balestrieri on 6/29/24.
+//
+
+#ifndef PrefixHeader_iOS_h
+#define PrefixHeader_iOS_h
+
+#include "iOSPrefixHeader.h"
+
+#endif /* PrefixHeader_iOS_h */
