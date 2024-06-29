@@ -23,7 +23,7 @@
 	#include "TRMetalImageView.h"
 #endif
 
-#define GET_CONTROL_DATA(A) (TRMetalImageView_Data *)REALGetControlData( A, &TRMetalImageView_Struct );
+#define GET_CONTROL_DATA(A) (TRMetalImageView_Data *)REALGetMobileControlData( A, &TRMetalImageView_Struct );
 
 
 static void TRMetalImageView_initializer(REALcontrolInstance);
@@ -88,17 +88,16 @@ static REALcontrolBehaviour TRMetalImageView_Behaviour = {
 };
 
 
-static REALcontrol TRMetalImageView_Struct = {
+static REALmobileControl TRMetalImageView_Struct = {
 	kCurrentREALControlVersion,
 	"TRMetalImageView",
 	sizeof(TRMetalImageView_Data),
-	REALdesktopControl, // flags
+	0, // flags
 	0, 0, // toolbar icons
 	200, 200, // width/height
 	TRMetalImageView_Properties, _countof(TRMetalImageView_Properties),
 	TRMetalImageView_Methods, _countof(TRMetalImageView_Methods),
 	NULL, 0,
-	&TRMetalImageView_Behaviour
 };
 
 
@@ -199,12 +198,12 @@ static void TRMetalImageView_finalizer( REALcontrolInstance control ) {
 
 
 static void * TRMetalImageView_handle_getter( REALcontrolInstance control ) {
-	TRMetalImageView_Data *data = (TRMetalImageView_Data *)REALGetControlData( control, &TRMetalImageView_Struct );
+	TRMetalImageView_Data *data = GET_CONTROL_DATA(control)
 
 	return (__bridge void *)data->view;
 }
 
 
 void PluginEntry( void ) {
-	REALRegisterControl(&TRMetalImageView_Struct);
+	REALRegisterMobileControl(&TRMetalImageView_Struct);
 }
