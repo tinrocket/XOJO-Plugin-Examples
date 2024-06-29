@@ -62,6 +62,7 @@ REALmethodDefinition TRMetalImageView_Methods[] = {
 };
 
 
+/*
 static REALcontrolBehaviour TRMetalImageView_Behaviour = {
 	TRMetalImageView_initializer,
 	TRMetalImageView_finalizer,
@@ -86,13 +87,14 @@ static REALcontrolBehaviour TRMetalImageView_Behaviour = {
 	NULL, // actionEventFunction
 	TRMetalImageView_handle_getter, // RatingControlHandle_getter
 };
+*/
 
 
 static REALmobileControl TRMetalImageView_Struct = {
 	kCurrentREALControlVersion,
 	"TRMetalImageView",
 	sizeof(TRMetalImageView_Data),
-	REALdesktopControl, // There's no flag for REALmobileControl
+	0, // There's no flag for REALmobileControl
 	0, 0, // toolbar icons
 	200, 200, // width/height
 	TRMetalImageView_Properties, _countof(TRMetalImageView_Properties),
