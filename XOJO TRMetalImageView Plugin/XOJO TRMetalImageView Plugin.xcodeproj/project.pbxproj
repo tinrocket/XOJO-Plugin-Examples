@@ -27,6 +27,7 @@
 		52B8845E2C308FF8001CEB64 /* rb_plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 521A9DC02C163C7B0041B0D7 /* rb_plugin.h */; };
 		52B8845F2C30900D001CEB64 /* rb_plugin_cpp.h in Headers */ = {isa = PBXBuildFile; fileRef = 521A9DBB2C163C7B0041B0D7 /* rb_plugin_cpp.h */; };
 		52B884602C309036001CEB64 /* PluginMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 521A9DC72C163C7B0041B0D7 /* PluginMain.cpp */; };
+		52B884632C30A297001CEB64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B8841A2C2DB20A001CEB64 /* Foundation.framework */; };
 		52EE023F2C1795A500771DAA /* TRMetalImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 52EE023B2C1795A500771DAA /* TRMetalImageView.h */; };
 		52EE02402C1795A500771DAA /* TRMetalImageViewLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 52EE023C2C1795A500771DAA /* TRMetalImageViewLayer.h */; };
 		52EE02412C1795A500771DAA /* TRMetalImageViewLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EE023D2C1795A500771DAA /* TRMetalImageViewLayer.m */; };
@@ -86,6 +87,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52B884592C307FF3001CEB64 /* UIKit.framework in Frameworks */,
+				52B884632C30A297001CEB64 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +518,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -558,6 +561,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
