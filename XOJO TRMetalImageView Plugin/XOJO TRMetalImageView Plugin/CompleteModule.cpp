@@ -5,7 +5,6 @@
 	#include "WinHeader++.h"
 #endif
 
-#define TARGET_OS_IPHONE 1
 #include "iOSPrefixHeader.h"
 
 // Always include rb_plugin.h when you want to get access
