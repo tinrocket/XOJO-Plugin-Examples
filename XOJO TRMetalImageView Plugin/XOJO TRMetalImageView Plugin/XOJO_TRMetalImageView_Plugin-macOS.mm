@@ -179,7 +179,7 @@ static void TRMetalImageView_initializer( REALcontrolInstance control ) {
 
 	// No need to calculate what frame to intialize the view with - the RB
 	// framework will move it around as needed.
-	TRMetalImageView *view = [[TRMetalImageView alloc] initWithFrame:NSMakeRect(0, 0, 100, 100)];
+	TRMetalImageView *view = [[TRMetalImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
 	
 	[view setTransparencyGrid:FALSE];
 	
