@@ -7,6 +7,7 @@
 
 #include <stdlib.h>
 #include <string.h>
+#include "iOSPrefixHeader.h" // JBalestrieri added to allow compiling
 
 #include "REALplugin.h"
 #include "rb_plugin.h"
