@@ -195,7 +195,7 @@ static void TRMetalImageView_finalizer( REALcontrolInstance control ) {
 
 
 static void * TRMetalImageView_handle_getter( REALcontrolInstance control ) {
-	TRMetalImageView_Data *data = (TRMetalImageView_Data *)REALGetControlData( control, &TRMetalImageView_Struct );
+	TRMetalImageView_Data *data = GET_CONTROL_DATA(control)
 
 	return (__bridge void *)data->view;
 }
