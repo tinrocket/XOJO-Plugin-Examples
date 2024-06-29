@@ -40,6 +40,7 @@
 		52FCE4092C30B538004BC698 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FCE4062C30B538004BC698 /* Metal.framework */; };
 		52FCE40A2C30B538004BC698 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FCE4072C30B538004BC698 /* MetalKit.framework */; };
 		52FCE40B2C30B538004BC698 /* MetalPerformanceShaders.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FCE4082C30B538004BC698 /* MetalPerformanceShaders.framework */; };
+		52FCE40D2C30B5A2004BC698 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FCE40C2C30B5A2004BC698 /* CoreImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		52FCE4062C30B538004BC698 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.2.sdk/System/Library/Frameworks/Metal.framework; sourceTree = DEVELOPER_DIR; };
 		52FCE4072C30B538004BC698 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.2.sdk/System/Library/Frameworks/MetalKit.framework; sourceTree = DEVELOPER_DIR; };
 		52FCE4082C30B538004BC698 /* MetalPerformanceShaders.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalPerformanceShaders.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.2.sdk/System/Library/Frameworks/MetalPerformanceShaders.framework; sourceTree = DEVELOPER_DIR; };
+		52FCE40C2C30B5A2004BC698 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.2.sdk/System/Library/Frameworks/CoreImage.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				52FCE40A2C30B538004BC698 /* MetalKit.framework in Frameworks */,
 				52FCE4092C30B538004BC698 /* Metal.framework in Frameworks */,
 				52B884632C30A297001CEB64 /* Foundation.framework in Frameworks */,
+				52FCE40D2C30B5A2004BC698 /* CoreImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +202,7 @@
 		521A9E7A2C1641000041B0D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52FCE40C2C30B5A2004BC698 /* CoreImage.framework */,
 				52FCE4062C30B538004BC698 /* Metal.framework */,
 				52FCE4072C30B538004BC698 /* MetalKit.framework */,
 				52FCE4082C30B538004BC698 /* MetalPerformanceShaders.framework */,
