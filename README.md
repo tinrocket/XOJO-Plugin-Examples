@@ -1,12 +1,12 @@
-### TRMTKImageView XOJO Plugin
+### TRMetalImageView XOJO Plugin
 
-This is project will wrap a hybrid macOS and iOS control, TRMTKImageView, as a XOJO plugin.
+This is project will wrap a hybrid macOS and iOS control, TRMetalImageView, as a XOJO plugin.
 
 The plugin is complete for macOS and contains an example project.
 
 **The next tasks is to create an iOS plugin. There are no clear examples for creating XOJO control plugins for iOS. Help from the XOJO community is greatly appreciated.**
 
-### TRMTKImageView
+### TRMetalImageView
 
 A hybrid macOS and iOS Metal-based control for displaying images. It's like NSImageView or UIImageView, but faster, and handles extremely large images. Can be used synced up with an NSScrollView or UIScrollView.
 
