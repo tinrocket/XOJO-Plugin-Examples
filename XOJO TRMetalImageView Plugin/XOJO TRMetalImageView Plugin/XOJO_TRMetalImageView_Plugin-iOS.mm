@@ -20,7 +20,6 @@
 	#if !defined(__OBJC__) || !defined(__cplusplus)
 		#error This file must be compiled as Objective-C++.
 	#endif
-	#include "TRMetalImageView.h"
 #endif
 
 #define GET_CONTROL_DATA(A) (TRMetalImageView_Data *)REALGetMobileControlData( A, &TRMetalImageView_Struct );
@@ -87,7 +86,7 @@ static REALmobileControlBehaviour TRMetalImageView_Behaviour = {
 
 static REALmobileControl TRMetalImageView_Struct = {
 	kCurrentREALControlVersion,
-	"TRMetalImageView",
+	"TRMetalImageViewMobile",
 	sizeof(TRMetalImageView_Data),
 	0, // There's no flag for REALmobileControl
 	0, 0, // toolbar icons
