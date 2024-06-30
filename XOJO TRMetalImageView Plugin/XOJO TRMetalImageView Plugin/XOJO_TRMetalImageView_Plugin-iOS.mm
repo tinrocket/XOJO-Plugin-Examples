@@ -62,32 +62,27 @@ REALmethodDefinition TRMetalImageView_Methods[] = {
 };
 
 
-/*
-static REALcontrolBehaviour TRMetalImageView_Behaviour = {
+
+static REALmobileControlBehaviour TRMetalImageView_Behaviour = {
 	TRMetalImageView_initializer,
 	TRMetalImageView_finalizer,
-	NULL, // redrawFunction
-	NULL, // clickFunction
-	NULL, // mouseDragFunction
-	NULL, // mouseUpFunction
-	NULL, // gainedFocusFunction
-	NULL, // lostFocusFunction
-	NULL, // keyDownFunction
-	NULL, // openFunction
-	NULL, // closeFunction
-	NULL, // backgroundIdleFunction
-	NULL, // drawOffscreenFunction
-	NULL, // setSpecialBackground
-	NULL, // constantChanging
-	NULL, // droppedNewInstance
-	NULL, // mouseEnterFunction
-	NULL, // mouseExitFunction
-	NULL, // mouseMoveFunction
-	NULL, // stateChangedFunction
-	NULL, // actionEventFunction
-	TRMetalImageView_handle_getter, // RatingControlHandle_getter
+	TRMetalImageView_handle_getter,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
 };
-*/
+
 
 
 static REALmobileControl TRMetalImageView_Struct = {
@@ -100,6 +95,7 @@ static REALmobileControl TRMetalImageView_Struct = {
 	TRMetalImageView_Properties, _countof(TRMetalImageView_Properties),
 	TRMetalImageView_Methods, _countof(TRMetalImageView_Methods),
 	NULL, 0,
+	&TRMetalImageView_Behaviour,
 };
 
 
