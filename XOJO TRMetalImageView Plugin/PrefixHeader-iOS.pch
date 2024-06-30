@@ -15,7 +15,4 @@
 
 #import "iOSPrefixHeader.h"
 
-#define TARGET_OS_IPHONE 1
-//#import "TRMetalImageView.h"
-
 #endif /* PrefixHeader_iOS_h */
