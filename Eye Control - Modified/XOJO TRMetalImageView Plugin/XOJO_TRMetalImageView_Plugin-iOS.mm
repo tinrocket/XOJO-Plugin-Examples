@@ -26,8 +26,8 @@ static void TRMetalImageView_initializer(REALcontrolInstance);
 static void TRMetalImageView_finalizer(REALcontrolInstance);
 
 static void * TRMetalImageView_handle_getter(REALcontrolInstance);
-static void * TRMetalImageView_image_getter(REALcontrolInstance);
-static void TRMetalImageView_image_setter(REALcontrolInstance, void *, void *);
+static void * TRMetalImageView_image_getter(REALcontrolInstance, RBInteger param);
+static void TRMetalImageView_image_setter(REALcontrolInstance, RBInteger param, void *);
 static NSUInteger TRMetalImageView_contentMode_getter(REALcontrolInstance);
 static void TRMetalImageView_contentMode_setter(REALcontrolInstance, void *, NSUInteger);
 static BOOL TRMetalImageView_rasterizeBeforeDrawing_getter(REALcontrolInstance);
@@ -53,8 +53,8 @@ static REALproperty TRMetalImageView_Properties[] = {
 
 
 static REALmethodDefinition TRMetalImageView_Methods[] = {
-	{ (REALproc)TRMetalImageView_configureForFasterDrawing, REALnoImplementation, "ConfigureForFasterDrawing()", REALpropRuntimeOnly },
-	{ (REALproc)TRMetalImageView_configureForVideo, REALnoImplementation, "ConfigureForVideo()", REALpropRuntimeOnly },
+	{ (REALproc)TRMetalImageView_configureForFasterDrawing, REALnoImplementation, "ConfigureForFasterDrawing()" },
+	{ (REALproc)TRMetalImageView_configureForVideo, REALnoImplementation, "ConfigureForVideo()" },
 };
 
 
@@ -99,14 +99,14 @@ static REALmobileControl TRMetalImageView_Struct = {
 
 #pragma mark - Properties
 
-static void * TRMetalImageView_image_getter( REALcontrolInstance control ) {
+static void * TRMetalImageView_image_getter( REALcontrolInstance control, RBInteger ) {
 	MobileControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
 
 	return (__bridge void *)[data->view image];
 }
 
 
-static void TRMetalImageView_image_setter( REALcontrolInstance control, void *, void * val ) {
+static void TRMetalImageView_image_setter( REALcontrolInstance control, RBInteger, void * val ) {
 	MobileControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
 
 	[data->view setImage:(__bridge CIImage *)val];
