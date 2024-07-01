@@ -18,10 +18,9 @@
 	#if !defined(__OBJC__) || !defined(__cplusplus)
 		#error This file must be compiled as Objective-C++.
 	#endif
-	#include "TRMetalImageView.h"
 #endif
 
-#define GET_CONTROL_DATA(A) (TRMetalImageView_Data *)REALGetControlData( A, &TRMetalImageView_Struct );
+//#define GET_CONTROL_DATA(A) (TRMetalImageView_Data *)REALGetControlData( A, &TRMetalImageView_Struct );
 
 
 static void TRMetalImageView_initializer(REALcontrolInstance);
@@ -103,56 +102,56 @@ static REALcontrol TRMetalImageView_Struct = {
 #pragma mark - Properties
 
 static void * TRMetalImageView_image_getter( REALcontrolInstance control ) {
-	TRMetalImageView_Data *data = GET_CONTROL_DATA(control)
+	ControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
 
 	return (__bridge void *)[data->view image];
 }
 
 
 static void TRMetalImageView_image_setter( REALcontrolInstance control, void *, void * val ) {
-	TRMetalImageView_Data *data = GET_CONTROL_DATA(control)
+	ControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
 
 	[data->view setImage:(__bridge CIImage *)val];
 }
 
 
 static NSUInteger TRMetalImageView_contentMode_getter( REALcontrolInstance control ) {
-	TRMetalImageView_Data *data = GET_CONTROL_DATA(control)
+	ControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
 
 	return (kTRMetalImageViewContentMode)[data->view contentMode];
 }
 
 
 static void TRMetalImageView_contentMode_setter( REALcontrolInstance control, void *, NSUInteger val ) {
-	TRMetalImageView_Data *data = GET_CONTROL_DATA(control)
+	ControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
 
 	[data->view setContentMode:(kTRMetalImageViewContentMode)val];
 }
 
 
 static BOOL TRMetalImageView_rasterizeBeforeDrawing_getter( REALcontrolInstance control ) {
-	TRMetalImageView_Data *data = GET_CONTROL_DATA(control)
+	ControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
 
 	return [data->view rasterizeBeforeDrawing];
 }
 
 
 static void TRMetalImageView_rasterizeBeforeDrawing_setter( REALcontrolInstance control, void *, BOOL val ) {
-	TRMetalImageView_Data *data = GET_CONTROL_DATA(control)
+	ControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
 
 	[data->view setRasterizeBeforeDrawing:val];
 }
 
 
 static BOOL TRMetalImageView_clearBeforeDrawing_getter( REALcontrolInstance control ) {
-	TRMetalImageView_Data *data = GET_CONTROL_DATA(control)
+	ControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
 
 	return [data->view clearBeforeDrawing];
 }
 
 
 static void TRMetalImageView_clearBeforeDrawing_setter( REALcontrolInstance control, void *, BOOL val ) {
-	TRMetalImageView_Data *data = GET_CONTROL_DATA(control)
+	ControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
 
 	[data->view setClearBeforeDrawing:val];
 }
@@ -161,14 +160,14 @@ static void TRMetalImageView_clearBeforeDrawing_setter( REALcontrolInstance cont
 #pragma mark - Methods
 
 static void TRMetalImageView_configureForFasterDrawing(REALcontrolInstance control) {
-	TRMetalImageView_Data *data = GET_CONTROL_DATA(control)
+	ControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
 
 	[data->view configureForFasterDrawing];
 }
 
 
 static void TRMetalImageView_configureForVideo(REALcontrolInstance control) {
-	TRMetalImageView_Data *data = GET_CONTROL_DATA(control)
+	ControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
 
 	[data->view configureForVideo];
 }
@@ -177,7 +176,7 @@ static void TRMetalImageView_configureForVideo(REALcontrolInstance control) {
 #pragma mark - Lifecycle
 
 static void TRMetalImageView_initializer( REALcontrolInstance control ) {
-	TRMetalImageView_Data *data = GET_CONTROL_DATA(control)
+	ControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
 
 	// No need to calculate what frame to intialize the view with - the RB
 	// framework will move it around as needed.
@@ -190,14 +189,14 @@ static void TRMetalImageView_initializer( REALcontrolInstance control ) {
 
 
 static void TRMetalImageView_finalizer( REALcontrolInstance control ) {
-	TRMetalImageView_Data *data = GET_CONTROL_DATA(control)
+	ControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
 
 	data->view = nil;
 }
 
 
 static void * TRMetalImageView_handle_getter( REALcontrolInstance control ) {
-	TRMetalImageView_Data *data = GET_CONTROL_DATA(control)
+	ControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
 
 	return (__bridge void *)data->view;
 }
