@@ -370,8 +370,7 @@
 		return 1.0;
 
 	CGSize drawableSize = self.metalLayer.drawableSize;
-	CGFloat screenScale = self.metalLayer.contentsScale;
-
+//	CGFloat screenScale = self.metalLayer.contentsScale;
 //	drawableSize.width *= 1.0 / screenScale;
 //	drawableSize.height *= 1.0 / screenScale;
 	
