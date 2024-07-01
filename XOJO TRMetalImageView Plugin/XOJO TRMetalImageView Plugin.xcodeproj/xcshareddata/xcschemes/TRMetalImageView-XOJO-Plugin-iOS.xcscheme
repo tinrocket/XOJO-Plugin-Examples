@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "52B8844B2C305BF4001CEB64"
-               BuildableName = "TRMetalImageView_XOJO_Plugin_iOS.framework"
-               BlueprintName = "TRMetalImageView-XOJO-Plugin-iOS"
+               BuildableName = "TRMetalImageView_XOJO_Plugin_iOS_framework.framework"
+               BlueprintName = "TRMetalImageView-XOJO-Plugin-iOS-framework"
                ReferencedContainer = "container:XOJO TRMetalImageView Plugin.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -50,8 +50,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "52B8844B2C305BF4001CEB64"
-            BuildableName = "TRMetalImageView_XOJO_Plugin_iOS.framework"
-            BlueprintName = "TRMetalImageView-XOJO-Plugin-iOS"
+            BuildableName = "TRMetalImageView_XOJO_Plugin_iOS_framework.framework"
+            BlueprintName = "TRMetalImageView-XOJO-Plugin-iOS-framework"
             ReferencedContainer = "container:XOJO TRMetalImageView Plugin.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
