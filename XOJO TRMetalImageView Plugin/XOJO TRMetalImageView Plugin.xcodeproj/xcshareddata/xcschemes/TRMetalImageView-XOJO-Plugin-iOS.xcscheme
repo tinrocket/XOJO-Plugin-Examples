@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "52B8844B2C305BF4001CEB64"
-               BuildableName = "TRMetalImageView_XOJO_Plugin_iOS_framework.framework"
-               BlueprintName = "TRMetalImageView-XOJO-Plugin-iOS-framework"
+               BlueprintIdentifier = "52FCE4142C32E5CE004BC698"
+               BuildableName = "libTRMetalImageView-XOJO-Plugin-iOS.dylib"
+               BlueprintName = "TRMetalImageView-XOJO-Plugin-iOS"
                ReferencedContainer = "container:XOJO TRMetalImageView Plugin.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,15 +46,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "52B8844B2C305BF4001CEB64"
-            BuildableName = "TRMetalImageView_XOJO_Plugin_iOS_framework.framework"
-            BlueprintName = "TRMetalImageView-XOJO-Plugin-iOS-framework"
-            ReferencedContainer = "container:XOJO TRMetalImageView Plugin.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
