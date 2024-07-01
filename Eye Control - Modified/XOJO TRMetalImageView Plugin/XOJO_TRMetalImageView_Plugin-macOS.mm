@@ -7,6 +7,8 @@
 
 #include <stdio.h>
 #include "rb_plugin.h"
+#import "TRMetalImageView.h"
+#include "XOJO_TRMetalImageView_Plugin-iOS.h"
 
 #if COCOA
 	// To keep this example simple, this file will need to be compiled as Obj-C++
@@ -202,5 +204,9 @@ static void * TRMetalImageView_handle_getter( REALcontrolInstance control ) {
 
 
 void PluginEntry( void ) {
+#if !TARGET_OS_IPHONE
 	REALRegisterControl(&TRMetalImageView_Struct);
+#endif
+	
+	RegisteriOSControl();
 }

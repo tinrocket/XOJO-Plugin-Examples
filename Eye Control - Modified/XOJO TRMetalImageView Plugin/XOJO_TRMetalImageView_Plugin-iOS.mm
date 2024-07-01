@@ -7,7 +7,6 @@
 
 #include <stdio.h>
 #include "rb_plugin.h"
-#include "TRMetalImageView.h"
 
 #if COCOA
 	// To keep this example simple, this file will need to be compiled as Obj-C++
@@ -200,6 +199,6 @@ static void * TRMetalImageView_handle_getter( REALcontrolInstance control ) {
 }
 
 
-void PluginEntry( void ) {
+void RegisteriOSControl( void ) {
 	REALRegisterMobileControl(&TRMetalImageView_Struct);
 }
