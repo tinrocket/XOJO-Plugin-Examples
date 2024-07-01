@@ -7,9 +7,6 @@
 
 #include <stdio.h>
 #include "rb_plugin.h"
-
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 #include "TRMetalImageView.h"
 
 #if COCOA
