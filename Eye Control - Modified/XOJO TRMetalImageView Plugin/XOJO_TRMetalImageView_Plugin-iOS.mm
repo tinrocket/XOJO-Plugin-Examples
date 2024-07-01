@@ -52,7 +52,7 @@ static REALproperty TRMetalImageView_Properties[] = {
 };
 
 
-REALmethodDefinition TRMetalImageView_Methods[] = {
+static REALmethodDefinition TRMetalImageView_Methods[] = {
 	{ (REALproc)TRMetalImageView_configureForFasterDrawing, REALnoImplementation, "ConfigureForFasterDrawing()", REALpropRuntimeOnly },
 	{ (REALproc)TRMetalImageView_configureForVideo, REALnoImplementation, "ConfigureForVideo()", REALpropRuntimeOnly },
 };
