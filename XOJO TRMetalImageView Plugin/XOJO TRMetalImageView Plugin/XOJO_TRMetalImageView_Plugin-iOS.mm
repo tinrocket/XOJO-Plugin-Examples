@@ -70,16 +70,6 @@ static REALmobileControlBehaviour TRMetalImageView_Behaviour = {
 	NULL,
 	NULL,
 	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
 };
 
 
@@ -88,11 +78,11 @@ static REALmobileControl TRMetalImageView_Struct = {
 	kCurrentREALControlVersion,
 	"TRMetalImageView",
 	sizeof(TRMetalImageView_Data),
-	0, // There's no flag for REALmobileControl
+	REALenabledControl,
 	0, 0, // toolbar icons
 	200, 200, // width/height
-	TRMetalImageView_Properties, _countof(TRMetalImageView_Properties),
-	TRMetalImageView_Methods, _countof(TRMetalImageView_Methods),
+	TRMetalImageView_Properties, sizeof(TRMetalImageView_Properties) / sizeof(REALproperty),
+	TRMetalImageView_Methods, sizeof(TRMetalImageView_Methods) / sizeof(REALmethodDefinition),
 	NULL, 0,
 	&TRMetalImageView_Behaviour,
 };
