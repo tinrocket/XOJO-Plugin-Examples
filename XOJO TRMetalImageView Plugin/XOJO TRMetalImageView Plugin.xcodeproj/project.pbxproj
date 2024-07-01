@@ -57,6 +57,9 @@
 		521A9DC72C163C7B0041B0D7 /* PluginMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PluginMain.cpp; sourceTree = "<group>"; };
 		521A9E6B2C163CB00041B0D7 /* XOJO_TRMetalImageView_Plugin-macOS.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = "XOJO_TRMetalImageView_Plugin-macOS.mm"; sourceTree = "<group>"; };
 		521A9E862C1645CB0041B0D7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		528A7D432C32FAEF00186058 /* EyeControlPlugin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EyeControlPlugin.cpp; sourceTree = "<group>"; };
+		528A7D452C32FAEF00186058 /* EyeControlMobile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EyeControlMobile.cpp; sourceTree = "<group>"; };
+		528A7D492C32FB0800186058 /* EyeControlMobile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EyeControlMobile.h; sourceTree = "<group>"; };
 		52B8841A2C2DB20A001CEB64 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		52B884672C30ABC4001CEB64 /* PrefixHeader-iOS.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PrefixHeader-iOS.pch"; sourceTree = "<group>"; };
 		52EE023B2C1795A500771DAA /* TRMetalImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMetalImageView.h; sourceTree = "<group>"; };
@@ -133,6 +136,9 @@
 			children = (
 				521A9E6B2C163CB00041B0D7 /* XOJO_TRMetalImageView_Plugin-macOS.mm */,
 				52FCE4002C30B43F004BC698 /* XOJO_TRMetalImageView_Plugin-iOS.mm */,
+				528A7D492C32FB0800186058 /* EyeControlMobile.h */,
+				528A7D452C32FAEF00186058 /* EyeControlMobile.cpp */,
+				528A7D432C32FAEF00186058 /* EyeControlPlugin.cpp */,
 			);
 			path = "XOJO TRMetalImageView Plugin";
 			sourceTree = "<group>";
@@ -481,16 +487,15 @@
 		52FCE41C2C32E5CE004BC698 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4V3Q8928C7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PrefixHeader-iOS.pch";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -504,16 +509,15 @@
 		52FCE41D2C32E5CE004BC698 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4V3Q8928C7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PrefixHeader-iOS.pch";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
