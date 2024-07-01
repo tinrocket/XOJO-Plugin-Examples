@@ -86,7 +86,7 @@ static REALcontrolBehaviour TRMetalImageView_Behaviour = {
 
 static REALcontrol TRMetalImageView_Struct = {
 	kCurrentREALControlVersion,
-	"MobileTRMetalImageView",
+	"TRMetalImageView",
 	sizeof(TRMetalImageView_Data),
 	REALdesktopControl, // flags
 	0, 0, // toolbar icons
