@@ -349,7 +349,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = ../iOSPrefixHeader.h;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphonesimulator;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = x86_64;
 			};
@@ -364,7 +364,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = ../iOSPrefixHeader.h;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphonesimulator;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = x86_64;
 			};
@@ -514,7 +514,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = ../iOSPrefixHeader.h;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphonesimulator;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = x86_64;
 			};
@@ -529,7 +529,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = ../iOSPrefixHeader.h;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphonesimulator;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = x86_64;
 			};
