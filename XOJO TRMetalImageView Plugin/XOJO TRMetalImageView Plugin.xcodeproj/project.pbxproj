@@ -198,12 +198,12 @@
 				52FCE4452C32EBF8004BC698 /* AppKit.framework */,
 				52FCE4322C32E720004BC698 /* CoreImage.framework */,
 				52FCE4302C32E712004BC698 /* Foundation.framework */,
+				521A9E862C1645CB0041B0D7 /* AppKit.framework */,
 				52FCE42C2C32E70C004BC698 /* Metal.framework */,
 				52FCE42B2C32E70C004BC698 /* MetalKit.framework */,
 				52FCE42A2C32E70C004BC698 /* MetalPerformanceShaders.framework */,
 				52FCE4282C32E705004BC698 /* UIKit.framework */,
 				52B8841A2C2DB20A001CEB64 /* Foundation.framework */,
-				521A9E862C1645CB0041B0D7 /* AppKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

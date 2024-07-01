@@ -7,34 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D32393325094E9F005949B8 /* rb_plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D7BCCAA2412A88A00766721 /* rb_plugin.h */; };
-		3D32393425094E9F005949B8 /* REALplugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D7BCCAB2412A88A00766721 /* REALplugin.h */; };
-		3D32393725094E9F005949B8 /* PluginMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BCCA92412A88A00766721 /* PluginMain.cpp */; };
 		3D32393E25094F0D005949B8 /* EyeControlMobile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D32393D25094F0D005949B8 /* EyeControlMobile.cpp */; };
 		3D32393F25094F0D005949B8 /* EyeControlMobile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D32393D25094F0D005949B8 /* EyeControlMobile.cpp */; };
 		3D32394125095544005949B8 /* EyeControlMobile.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D32394025095544005949B8 /* EyeControlMobile.h */; };
 		3D32394225095544005949B8 /* EyeControlMobile.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D32394025095544005949B8 /* EyeControlMobile.h */; };
 		3D7BCCA82412A87000766721 /* EyeControlPlugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BCCA72412A87000766721 /* EyeControlPlugin.cpp */; };
-		3D7BCCAC2412A88A00766721 /* PluginMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BCCA92412A88A00766721 /* PluginMain.cpp */; };
-		3D7BCCAD2412A88A00766721 /* rb_plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D7BCCAA2412A88A00766721 /* rb_plugin.h */; };
-		3D7BCCAE2412A88A00766721 /* REALplugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D7BCCAB2412A88A00766721 /* REALplugin.h */; };
-		528A7D4E2C330A4B00186058 /* rb_plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D7BCCAA2412A88A00766721 /* rb_plugin.h */; };
-		528A7D4F2C330A4B00186058 /* REALplugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D7BCCAB2412A88A00766721 /* REALplugin.h */; };
-		528A7D532C330A4B00186058 /* PluginMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BCCA92412A88A00766721 /* PluginMain.cpp */; };
 		528A7D632C330AA500186058 /* TRMetalImageViewLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 528A7D5D2C330AA500186058 /* TRMetalImageViewLayer.h */; };
 		528A7D642C330AA500186058 /* TRMetalImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 528A7D5E2C330AA500186058 /* TRMetalImageView.h */; };
 		528A7D652C330AA500186058 /* TRMetalImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 528A7D5F2C330AA500186058 /* TRMetalImageView.m */; };
 		528A7D662C330AA500186058 /* TRMetalImageViewLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 528A7D602C330AA500186058 /* TRMetalImageViewLayer.m */; };
 		528A7D682C330C8500186058 /* XOJO_TRMetalImageView_Plugin-iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 528A7D612C330AA500186058 /* XOJO_TRMetalImageView_Plugin-iOS.mm */; };
 		528A7D6A2C330CFF00186058 /* EyeControlPlugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BCCA72412A87000766721 /* EyeControlPlugin.cpp */; };
-		528A7D6F2C332D2500186058 /* rb_plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D7BCCAA2412A88A00766721 /* rb_plugin.h */; };
-		528A7D702C332D2500186058 /* REALplugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D7BCCAB2412A88A00766721 /* REALplugin.h */; };
-		528A7D742C332D2500186058 /* PluginMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BCCA92412A88A00766721 /* PluginMain.cpp */; };
 		528A7D7A2C332D6200186058 /* TRMetalImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 528A7D5E2C330AA500186058 /* TRMetalImageView.h */; };
 		528A7D7B2C332D6200186058 /* TRMetalImageViewLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 528A7D602C330AA500186058 /* TRMetalImageViewLayer.m */; };
 		528A7D7C2C332D6200186058 /* TRMetalImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 528A7D5F2C330AA500186058 /* TRMetalImageView.m */; };
 		528A7D7D2C332D6200186058 /* TRMetalImageViewLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 528A7D5D2C330AA500186058 /* TRMetalImageViewLayer.h */; };
 		528A7D7E2C332D6700186058 /* XOJO_TRMetalImageView_Plugin-macOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 528A7D6B2C332D1F00186058 /* XOJO_TRMetalImageView_Plugin-macOS.mm */; };
+		528A7D802C332F2800186058 /* PluginMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 528A7D7F2C332F2800186058 /* PluginMain.cpp */; };
+		528A7D812C332F2800186058 /* PluginMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 528A7D7F2C332F2800186058 /* PluginMain.cpp */; };
+		528A7D822C332F2800186058 /* PluginMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 528A7D7F2C332F2800186058 /* PluginMain.cpp */; };
+		528A7D832C332F2800186058 /* PluginMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 528A7D7F2C332F2800186058 /* PluginMain.cpp */; };
+		528A7D862C332F3100186058 /* REALplugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 528A7D842C332F3100186058 /* REALplugin.h */; };
+		528A7D872C332F3100186058 /* REALplugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 528A7D842C332F3100186058 /* REALplugin.h */; };
+		528A7D882C332F3100186058 /* REALplugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 528A7D842C332F3100186058 /* REALplugin.h */; };
+		528A7D892C332F3100186058 /* REALplugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 528A7D842C332F3100186058 /* REALplugin.h */; };
+		528A7D8A2C332F3100186058 /* rb_plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 528A7D852C332F3100186058 /* rb_plugin.h */; };
+		528A7D8B2C332F3100186058 /* rb_plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 528A7D852C332F3100186058 /* rb_plugin.h */; };
+		528A7D8C2C332F3100186058 /* rb_plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 528A7D852C332F3100186058 /* rb_plugin.h */; };
+		528A7D8D2C332F3100186058 /* rb_plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 528A7D852C332F3100186058 /* rb_plugin.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,9 +43,6 @@
 		3D32394025095544005949B8 /* EyeControlMobile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EyeControlMobile.h; path = ../EyeControlMobile.h; sourceTree = "<group>"; };
 		3D5F1F942412A84400BEB519 /* libEyeControl.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEyeControl.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D7BCCA72412A87000766721 /* EyeControlPlugin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EyeControlPlugin.cpp; path = ../EyeControlPlugin.cpp; sourceTree = "<group>"; };
-		3D7BCCA92412A88A00766721 /* PluginMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginMain.cpp; path = ../../../GlueCode/PluginMain.cpp; sourceTree = "<group>"; };
-		3D7BCCAA2412A88A00766721 /* rb_plugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rb_plugin.h; path = ../../../Includes/rb_plugin.h; sourceTree = "<group>"; };
-		3D7BCCAB2412A88A00766721 /* REALplugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REALplugin.h; path = ../../../Includes/REALplugin.h; sourceTree = "<group>"; };
 		528A7D582C330A4B00186058 /* libtrmetalimageview-iOS.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "libtrmetalimageview-iOS.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
 		528A7D5D2C330AA500186058 /* TRMetalImageViewLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMetalImageViewLayer.h; sourceTree = "<group>"; };
 		528A7D5E2C330AA500186058 /* TRMetalImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMetalImageView.h; sourceTree = "<group>"; };
@@ -54,6 +51,9 @@
 		528A7D612C330AA500186058 /* XOJO_TRMetalImageView_Plugin-iOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "XOJO_TRMetalImageView_Plugin-iOS.mm"; sourceTree = "<group>"; };
 		528A7D6B2C332D1F00186058 /* XOJO_TRMetalImageView_Plugin-macOS.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "XOJO_TRMetalImageView_Plugin-macOS.mm"; sourceTree = "<group>"; };
 		528A7D792C332D2500186058 /* libtrmetalimageview-macOS.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "libtrmetalimageview-macOS.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		528A7D7F2C332F2800186058 /* PluginMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginMain.cpp; path = "../../XOJO TRMetalImageView Plugin/PluginSDK/2024 R1.1/GlueCode/PluginMain.cpp"; sourceTree = "<group>"; };
+		528A7D842C332F3100186058 /* REALplugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REALplugin.h; path = "../../XOJO TRMetalImageView Plugin/PluginSDK/2024 R1.1/Includes/REALplugin.h"; sourceTree = "<group>"; };
+		528A7D852C332F3100186058 /* rb_plugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rb_plugin.h; path = "../../XOJO TRMetalImageView Plugin/PluginSDK/2024 R1.1/Includes/rb_plugin.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +95,9 @@
 				3D7BCCA72412A87000766721 /* EyeControlPlugin.cpp */,
 				3D32394025095544005949B8 /* EyeControlMobile.h */,
 				3D32393D25094F0D005949B8 /* EyeControlMobile.cpp */,
-				3D7BCCA92412A88A00766721 /* PluginMain.cpp */,
-				3D7BCCAA2412A88A00766721 /* rb_plugin.h */,
-				3D7BCCAB2412A88A00766721 /* REALplugin.h */,
+				528A7D7F2C332F2800186058 /* PluginMain.cpp */,
+				528A7D852C332F3100186058 /* rb_plugin.h */,
+				528A7D842C332F3100186058 /* REALplugin.h */,
 				528A7D5A2C330AA500186058 /* XOJO TRMetalImageView Plugin */,
 			);
 			sourceTree = "<group>";
@@ -143,8 +143,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D32394225095544005949B8 /* EyeControlMobile.h in Headers */,
-				3D32393325094E9F005949B8 /* rb_plugin.h in Headers */,
-				3D32393425094E9F005949B8 /* REALplugin.h in Headers */,
+				528A7D872C332F3100186058 /* REALplugin.h in Headers */,
+				528A7D8B2C332F3100186058 /* rb_plugin.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,8 +153,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D32394125095544005949B8 /* EyeControlMobile.h in Headers */,
-				3D7BCCAD2412A88A00766721 /* rb_plugin.h in Headers */,
-				3D7BCCAE2412A88A00766721 /* REALplugin.h in Headers */,
+				528A7D862C332F3100186058 /* REALplugin.h in Headers */,
+				528A7D8A2C332F3100186058 /* rb_plugin.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,10 +162,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				528A7D882C332F3100186058 /* REALplugin.h in Headers */,
 				528A7D642C330AA500186058 /* TRMetalImageView.h in Headers */,
 				528A7D632C330AA500186058 /* TRMetalImageViewLayer.h in Headers */,
-				528A7D4E2C330A4B00186058 /* rb_plugin.h in Headers */,
-				528A7D4F2C330A4B00186058 /* REALplugin.h in Headers */,
+				528A7D8C2C332F3100186058 /* rb_plugin.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,9 +173,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				528A7D6F2C332D2500186058 /* rb_plugin.h in Headers */,
+				528A7D892C332F3100186058 /* REALplugin.h in Headers */,
 				528A7D7D2C332D6200186058 /* TRMetalImageViewLayer.h in Headers */,
-				528A7D702C332D2500186058 /* REALplugin.h in Headers */,
+				528A7D8D2C332F3100186058 /* rb_plugin.h in Headers */,
 				528A7D7A2C332D6200186058 /* TRMetalImageView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +291,7 @@
 			files = (
 				3D32393F25094F0D005949B8 /* EyeControlMobile.cpp in Sources */,
 				528A7D6A2C330CFF00186058 /* EyeControlPlugin.cpp in Sources */,
-				3D32393725094E9F005949B8 /* PluginMain.cpp in Sources */,
+				528A7D812C332F2800186058 /* PluginMain.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +301,7 @@
 			files = (
 				3D32393E25094F0D005949B8 /* EyeControlMobile.cpp in Sources */,
 				3D7BCCA82412A87000766721 /* EyeControlPlugin.cpp in Sources */,
-				3D7BCCAC2412A88A00766721 /* PluginMain.cpp in Sources */,
+				528A7D802C332F2800186058 /* PluginMain.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,8 +311,8 @@
 			files = (
 				528A7D662C330AA500186058 /* TRMetalImageViewLayer.m in Sources */,
 				528A7D652C330AA500186058 /* TRMetalImageView.m in Sources */,
-				528A7D532C330A4B00186058 /* PluginMain.cpp in Sources */,
 				528A7D682C330C8500186058 /* XOJO_TRMetalImageView_Plugin-iOS.mm in Sources */,
+				528A7D822C332F2800186058 /* PluginMain.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,7 +323,7 @@
 				528A7D7C2C332D6200186058 /* TRMetalImageView.m in Sources */,
 				528A7D7E2C332D6700186058 /* XOJO_TRMetalImageView_Plugin-macOS.mm in Sources */,
 				528A7D7B2C332D6200186058 /* TRMetalImageViewLayer.m in Sources */,
-				528A7D742C332D2500186058 /* PluginMain.cpp in Sources */,
+				528A7D832C332F2800186058 /* PluginMain.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +337,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
-				GCC_PREFIX_HEADER = ../../../Includes/iOSPrefixHeader.h;
+				GCC_PREFIX_HEADER = ../iOSPrefixHeader.h;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphonesimulator;
 				SKIP_INSTALL = YES;
@@ -352,7 +352,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
-				GCC_PREFIX_HEADER = ../../../Includes/iOSPrefixHeader.h;
+				GCC_PREFIX_HEADER = ../iOSPrefixHeader.h;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphonesimulator;
 				SKIP_INSTALL = YES;
@@ -502,7 +502,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
-				GCC_PREFIX_HEADER = ../../../Includes/iOSPrefixHeader.h;
+				GCC_PREFIX_HEADER = ../iOSPrefixHeader.h;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphonesimulator;
 				SKIP_INSTALL = YES;
@@ -517,7 +517,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
-				GCC_PREFIX_HEADER = ../../../Includes/iOSPrefixHeader.h;
+				GCC_PREFIX_HEADER = ../iOSPrefixHeader.h;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphonesimulator;
 				SKIP_INSTALL = YES;
