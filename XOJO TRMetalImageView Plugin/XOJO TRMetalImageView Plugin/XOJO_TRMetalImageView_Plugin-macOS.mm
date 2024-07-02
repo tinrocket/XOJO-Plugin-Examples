@@ -59,7 +59,7 @@ static REALmethodDefinition TRMetalImageView_Methods[] = {
 };
 
 
-static static REALcontrolBehaviour TRMetalImageView_Behaviour = {
+static REALcontrolBehaviour TRMetalImageView_Behaviour = {
 	TRMetalImageView_initializer,
 	TRMetalImageView_finalizer,
 	NULL, // redrawFunction
