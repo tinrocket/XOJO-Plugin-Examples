@@ -205,9 +205,14 @@ static void * TRMetalImageView_handle_getter( REALcontrolInstance control ) {
 
 
 void PluginEntry( void ) {
-#if !TARGET_OS_IPHONE
 	REALRegisterControl(&TRMetalImageView_Struct);
-#endif
 
+//	RegisteriOSControl();
+	
+#if TARGET_OS_IPHONE
+//	REALRegisterControl(&TRMetalImageView_Struct);
 	RegisteriOSControl();
+//#else
+//	REALRegisterControl(&TRMetalImageView_Struct);
+#endif
 }
