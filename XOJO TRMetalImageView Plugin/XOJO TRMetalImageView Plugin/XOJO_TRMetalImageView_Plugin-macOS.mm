@@ -180,7 +180,11 @@ static void TRMetalImageView_initializer( REALcontrolInstance control ) {
 
 	// No need to calculate what frame to intialize the view with - the RB
 	// framework will move it around as needed.
+#if TARGET_OS_IPHONE
+	TRMetalImageView *view = [[TRMetalImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+#else
 	TRMetalImageView *view = [[TRMetalImageView alloc] initWithFrame:NSMakeRect(0, 0, 100, 100)];
+#endif
 	
 	[view setTransparencyGrid:FALSE];
 	
@@ -203,9 +207,6 @@ static void * TRMetalImageView_handle_getter( REALcontrolInstance control ) {
 
 
 void PluginEntry( void ) {
-#if !TARGET_OS_IPHONE
 	REALRegisterControl(&TRMetalImageView_Struct);
-#endif
-	
 	RegisteriOSControl();
 }
