@@ -44,7 +44,7 @@ struct TRMetalImageView_Data {
 };
 
 
-static REALproperty TRMetalImageView_Properties[] = {
+static REALproperty TRMetalImageView_Properties_iOS[] = {
 	{"", "CIImage", "Ptr", 0, (REALproc)TRMetalImageView_image_getter, (REALproc)TRMetalImageView_image_setter},
 	{"", "ContentMode", "UInteger", 0, (REALproc)TRMetalImageView_contentMode_getter, (REALproc)TRMetalImageView_contentMode_setter},
 	{"", "RasterizeBeforeDrawing", "Boolean", 0, (REALproc)TRMetalImageView_rasterizeBeforeDrawing_getter, (REALproc)TRMetalImageView_rasterizeBeforeDrawing_setter},
@@ -52,14 +52,13 @@ static REALproperty TRMetalImageView_Properties[] = {
 };
 
 
-static REALmethodDefinition TRMetalImageView_Methods[] = {
+static REALmethodDefinition TRMetalImageView_Methods_iOS[] = {
 	{ (REALproc)TRMetalImageView_configureForFasterDrawing, REALnoImplementation, "ConfigureForFasterDrawing()" },
 	{ (REALproc)TRMetalImageView_configureForVideo, REALnoImplementation, "ConfigureForVideo()" },
 };
 
 
-
-static REALmobileControlBehaviour TRMetalImageView_Behaviour = {
+static REALmobileControlBehaviour TRMetalImageView_Behaviour_iOS = {
 	TRMetalImageView_initializer,
 	TRMetalImageView_finalizer,
 	TRMetalImageView_handle_getter,
@@ -70,18 +69,17 @@ static REALmobileControlBehaviour TRMetalImageView_Behaviour = {
 };
 
 
-
-static REALmobileControl TRMetalImageView_Struct = {
+static REALmobileControl TRMetalImageView_Struct_iOS = {
 	kCurrentREALControlVersion,
 	"TRMetalImageView",
 	sizeof(TRMetalImageView_Data),
 	REALenabledControl,
 	0, 0, // toolbar icons
 	200, 200, // width/height
-	TRMetalImageView_Properties, sizeof(TRMetalImageView_Properties) / sizeof(REALproperty),
-	TRMetalImageView_Methods, sizeof(TRMetalImageView_Methods) / sizeof(REALmethodDefinition),
+	TRMetalImageView_Properties_iOS, sizeof(TRMetalImageView_Properties_iOS) / sizeof(REALproperty),
+	TRMetalImageView_Methods_iOS, sizeof(TRMetalImageView_Methods_iOS) / sizeof(REALmethodDefinition),
 	NULL, 0,
-	&TRMetalImageView_Behaviour,
+	&TRMetalImageView_Behaviour_iOS,
 	
 	
 //	kCurrentREALControlVersion,
@@ -100,56 +98,56 @@ static REALmobileControl TRMetalImageView_Struct = {
 #pragma mark - Properties
 
 static void * TRMetalImageView_image_getter( REALcontrolInstance control, RBInteger ) {
-	MobileControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
+	MobileControlData(TRMetalImageView_Struct_iOS, control, TRMetalImageView_Data, data);
 
 	return (__bridge void *)[data->view image];
 }
 
 
 static void TRMetalImageView_image_setter( REALcontrolInstance control, RBInteger, void * val ) {
-	MobileControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
+	MobileControlData(TRMetalImageView_Struct_iOS, control, TRMetalImageView_Data, data);
 
 	[data->view setImage:(__bridge CIImage *)val];
 }
 
 
 static NSUInteger TRMetalImageView_contentMode_getter( REALcontrolInstance control ) {
-	MobileControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
+	MobileControlData(TRMetalImageView_Struct_iOS, control, TRMetalImageView_Data, data);
 
 	return (kTRMetalImageViewContentMode)[data->view contentMode];
 }
 
 
 static void TRMetalImageView_contentMode_setter( REALcontrolInstance control, void *, NSUInteger val ) {
-	MobileControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
+	MobileControlData(TRMetalImageView_Struct_iOS, control, TRMetalImageView_Data, data);
 
 	[data->view setContentMode:(kTRMetalImageViewContentMode)val];
 }
 
 
 static BOOL TRMetalImageView_rasterizeBeforeDrawing_getter( REALcontrolInstance control ) {
-	MobileControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
+	MobileControlData(TRMetalImageView_Struct_iOS, control, TRMetalImageView_Data, data);
 
 	return [data->view rasterizeBeforeDrawing];
 }
 
 
 static void TRMetalImageView_rasterizeBeforeDrawing_setter( REALcontrolInstance control, void *, BOOL val ) {
-	MobileControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
+	MobileControlData(TRMetalImageView_Struct_iOS, control, TRMetalImageView_Data, data);
 
 	[data->view setRasterizeBeforeDrawing:val];
 }
 
 
 static BOOL TRMetalImageView_clearBeforeDrawing_getter( REALcontrolInstance control ) {
-	MobileControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
+	MobileControlData(TRMetalImageView_Struct_iOS, control, TRMetalImageView_Data, data);
 
 	return [data->view clearBeforeDrawing];
 }
 
 
 static void TRMetalImageView_clearBeforeDrawing_setter( REALcontrolInstance control, void *, BOOL val ) {
-	MobileControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
+	MobileControlData(TRMetalImageView_Struct_iOS, control, TRMetalImageView_Data, data);
 
 	[data->view setClearBeforeDrawing:val];
 }
@@ -158,14 +156,14 @@ static void TRMetalImageView_clearBeforeDrawing_setter( REALcontrolInstance cont
 #pragma mark - Methods
 
 static void TRMetalImageView_configureForFasterDrawing(REALcontrolInstance control) {
-	MobileControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
+	MobileControlData(TRMetalImageView_Struct_iOS, control, TRMetalImageView_Data, data);
 
 	[data->view configureForFasterDrawing];
 }
 
 
 static void TRMetalImageView_configureForVideo(REALcontrolInstance control) {
-	MobileControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
+	MobileControlData(TRMetalImageView_Struct_iOS, control, TRMetalImageView_Data, data);
 
 	[data->view configureForVideo];
 }
@@ -174,7 +172,7 @@ static void TRMetalImageView_configureForVideo(REALcontrolInstance control) {
 #pragma mark - Lifecycle
 
 static void TRMetalImageView_initializer( REALcontrolInstance control ) {
-	MobileControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
+	MobileControlData(TRMetalImageView_Struct_iOS, control, TRMetalImageView_Data, data);
 
 	// No need to calculate what frame to intialize the view with - the RB
 	// framework will move it around as needed.
@@ -187,19 +185,19 @@ static void TRMetalImageView_initializer( REALcontrolInstance control ) {
 
 
 static void TRMetalImageView_finalizer( REALcontrolInstance control ) {
-	MobileControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
+	MobileControlData(TRMetalImageView_Struct_iOS, control, TRMetalImageView_Data, data);
 
 	data->view = nil;
 }
 
 
 static void * TRMetalImageView_handle_getter( REALcontrolInstance control ) {
-	MobileControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
+	MobileControlData(TRMetalImageView_Struct_iOS, control, TRMetalImageView_Data, data);
 
 	return (__bridge void *)data->view;
 }
 
 
 void RegisteriOSControl( void ) {
-	REALRegisterMobileControl(&TRMetalImageView_Struct);
+	REALRegisterMobileControl(&TRMetalImageView_Struct_iOS);
 }
