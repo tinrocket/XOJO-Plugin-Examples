@@ -176,6 +176,7 @@ static void TRMetalImageView_configureForVideo(REALcontrolInstance control) {
 #pragma mark - Lifecycle
 
 static void TRMetalImageView_initializer( REALcontrolInstance control ) {
+#if !TARGET_OS_IPHONE
 	ControlData(TRMetalImageView_Struct, control, TRMetalImageView_Data, data);
 
 	// No need to calculate what frame to intialize the view with - the RB
@@ -185,6 +186,7 @@ static void TRMetalImageView_initializer( REALcontrolInstance control ) {
 	[view setTransparencyGrid:FALSE];
 	
 	data->view = view;
+#endif
 }
 
 
@@ -206,6 +208,6 @@ void PluginEntry( void ) {
 #if !TARGET_OS_IPHONE
 	REALRegisterControl(&TRMetalImageView_Struct);
 #endif
-	
+
 	RegisteriOSControl();
 }
