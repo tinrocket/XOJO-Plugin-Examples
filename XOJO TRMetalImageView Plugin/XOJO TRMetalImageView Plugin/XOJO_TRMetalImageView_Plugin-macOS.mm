@@ -180,7 +180,11 @@ static void TRMetalImageView_initializer( REALcontrolInstance control ) {
 
 	// No need to calculate what frame to intialize the view with - the RB
 	// framework will move it around as needed.
+#if TARGET_OS_IPHONE
 	TRMetalImageView *view = [[TRMetalImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+#else
+	TRMetalImageView *view = [[TRMetalImageView alloc] initWithFrame:NSMakeRect(0, 0, 100, 100)];
+#endif
 	
 	[view setTransparencyGrid:FALSE];
 	
@@ -203,10 +207,10 @@ static void * TRMetalImageView_handle_getter( REALcontrolInstance control ) {
 
 
 void PluginEntry( void ) {
+	// PROBLEM IS HERE
+	// Either I can build and run the plugin for macOS, or iOS, but not both
+	// Mac control plugin parts are needed for the IDE
+	
 	REALRegisterControl(&TRMetalImageView_Struct);
 	RegisteriOSControl();
-
-#if TARGET_OS_IPHONE
-//	RegisteriOSControl();
-#endif
 }
