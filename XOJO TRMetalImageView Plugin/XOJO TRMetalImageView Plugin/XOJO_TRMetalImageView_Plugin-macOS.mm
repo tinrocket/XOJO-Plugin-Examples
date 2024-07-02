@@ -87,7 +87,7 @@ static REALcontrolBehaviour TRMetalImageView_Behaviour = {
 
 static REALcontrol TRMetalImageView_Struct = {
 	kCurrentREALControlVersion,
-	"TRMetalImageView",
+	"DesktopTRMetalImageView",
 	sizeof(TRMetalImageView_Data),
 	REALdesktopControl, // flags
 	0, 0, // toolbar icons
@@ -207,19 +207,6 @@ static void * TRMetalImageView_handle_getter( REALcontrolInstance control ) {
 
 
 void PluginEntry( void ) {
-	// PROBLEM IS HERE
-	// Either I can build and run the plugin for macOS, or iOS, but not both
-	// Mac control plugin parts are needed for the IDE
-
-#define FOR_IOS_ONLY 1
-	
-#if FOR_IOS_ONLY
-	// This is for the iOS plugin
 	REALRegisterControl(&TRMetalImageView_Struct);
 	RegisteriOSControl();
-#else
-	// This is for the iOS plugin
-	// Previously compiled iOS parts will not work
-	REALRegisterControl(&TRMetalImageView_Struct);
-#endif
 }

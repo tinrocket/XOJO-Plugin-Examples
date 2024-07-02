@@ -71,7 +71,7 @@ static REALmobileControlBehaviour TRMetalImageView_Behaviour_iOS = {
 
 static REALmobileControl TRMetalImageView_Struct_iOS = {
 	kCurrentREALControlVersion,
-	"TRMetalImageView",
+	"MobileTRMetalImageView",
 	sizeof(TRMetalImageView_Data),
 	REALenabledControl,
 	0, 0, // toolbar icons
