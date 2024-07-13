@@ -6,6 +6,22 @@
 	objectVersion = 56;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		5234499B2C4328B40093C08A /* TRMetalImageView.xojo_plugin */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 5234499E2C4328B40093C08A /* Build configuration list for PBXAggregateTarget "TRMetalImageView.xojo_plugin" */;
+			buildPhases = (
+				526081202C432E3600DCFB60 /* ShellScript */,
+			);
+			dependencies = (
+				523449A02C4328C00093C08A /* PBXTargetDependency */,
+				523449A22C4328C00093C08A /* PBXTargetDependency */,
+			);
+			name = TRMetalImageView.xojo_plugin;
+			productName = "Build and Package Plugin";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		521A9E4B2C163C7B0041B0D7 /* rb_plugin_cpp.h in Headers */ = {isa = PBXBuildFile; fileRef = 521A9DBB2C163C7B0041B0D7 /* rb_plugin_cpp.h */; };
 		521A9E512C163C7B0041B0D7 /* REALplugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 521A9DC12C163C7B0041B0D7 /* REALplugin.h */; };
@@ -50,6 +66,23 @@
 		52FCE4492C32F561004BC698 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521A9E862C1645CB0041B0D7 /* AppKit.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5234499F2C4328C00093C08A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 521A9CD52C163C500041B0D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52FCE4142C32E5CE004BC698;
+			remoteInfo = "TRMetalImageView-XOJO-Plugin-iOS";
+		};
+		523449A12C4328C00093C08A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 521A9CD52C163C500041B0D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 521A9CDC2C163C500041B0D7;
+			remoteInfo = "TRMetalImageView-XOJO-Plugin-macOS";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		521A9CDD2C163C500041B0D7 /* libTRMetalImageView-XOJO-Plugin-macOS.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "libTRMetalImageView-XOJO-Plugin-macOS.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
 		521A9DBB2C163C7B0041B0D7 /* rb_plugin_cpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rb_plugin_cpp.h; sourceTree = "<group>"; };
@@ -61,6 +94,7 @@
 		521A9DC72C163C7B0041B0D7 /* PluginMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PluginMain.cpp; sourceTree = "<group>"; };
 		521A9E6B2C163CB00041B0D7 /* XOJO_TRMetalImageView_Plugin-macOS.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = "XOJO_TRMetalImageView_Plugin-macOS.mm"; sourceTree = "<group>"; };
 		521A9E862C1645CB0041B0D7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		526081232C4331EB00DCFB60 /* Scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Scripts; sourceTree = "<group>"; };
 		528A7D952C33876500186058 /* XOJO_TRMetalImageView_Plugin-iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XOJO_TRMetalImageView_Plugin-iOS.h"; sourceTree = "<group>"; };
 		52B8841A2C2DB20A001CEB64 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		52B884672C30ABC4001CEB64 /* PrefixHeader-iOS.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PrefixHeader-iOS.pch"; sourceTree = "<group>"; };
@@ -120,6 +154,7 @@
 				521A9E6D2C1640DA0041B0D7 /* TRMetalImageView */,
 				521A9E6A2C163C840041B0D7 /* PluginSDK */,
 				521A9CDE2C163C500041B0D7 /* Products */,
+				526081232C4331EB00DCFB60 /* Scripts */,
 				521A9E7A2C1641000041B0D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -289,6 +324,9 @@
 					521A9CDC2C163C500041B0D7 = {
 						CreatedOnToolsVersion = 15.2;
 					};
+					5234499B2C4328B40093C08A = {
+						CreatedOnToolsVersion = 15.2;
+					};
 					52FCE4142C32E5CE004BC698 = {
 						CreatedOnToolsVersion = 15.2;
 					};
@@ -309,9 +347,31 @@
 			targets = (
 				521A9CDC2C163C500041B0D7 /* TRMetalImageView-XOJO-Plugin-macOS */,
 				52FCE4142C32E5CE004BC698 /* TRMetalImageView-XOJO-Plugin-iOS */,
+				5234499B2C4328B40093C08A /* TRMetalImageView.xojo_plugin */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		526081202C432E3600DCFB60 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n\"${SRCROOT}/scripts/Build_and_Package_Plugin.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		521A9CDA2C163C500041B0D7 /* Sources */ = {
@@ -340,6 +400,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		523449A02C4328C00093C08A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52FCE4142C32E5CE004BC698 /* TRMetalImageView-XOJO-Plugin-iOS */;
+			targetProxy = 5234499F2C4328C00093C08A /* PBXContainerItemProxy */;
+		};
+		523449A22C4328C00093C08A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 521A9CDC2C163C500041B0D7 /* TRMetalImageView-XOJO-Plugin-macOS */;
+			targetProxy = 523449A12C4328C00093C08A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		521A9CE42C163C500041B0D7 /* Debug */ = {
@@ -488,6 +561,26 @@
 			};
 			name = Release;
 		};
+		5234499C2C4328B40093C08A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4V3Q8928C7;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5234499D2C4328B40093C08A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4V3Q8928C7;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		52FCE41C2C32E5CE004BC698 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -551,6 +644,15 @@
 			buildConfigurations = (
 				521A9CE72C163C500041B0D7 /* Debug */,
 				521A9CE82C163C500041B0D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5234499E2C4328B40093C08A /* Build configuration list for PBXAggregateTarget "TRMetalImageView.xojo_plugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5234499C2C4328B40093C08A /* Debug */,
+				5234499D2C4328B40093C08A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
