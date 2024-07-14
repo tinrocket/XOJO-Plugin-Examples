@@ -16,10 +16,10 @@ mkdir -p "${DEST_DIR}/iOS Simulator"
 
 # Copy the build files to the destination directory
 # Were building universal
-cp -R "${BUILD_DIR}/Debug"/* "${DEST_DIR}/Mac arm64/"
-cp -R "${BUILD_DIR}/Debug"/* "${DEST_DIR}/Mac x86-64/"
-cp -R "${BUILD_DIR}/Debug-iphoneos"/* "${DEST_DIR}/iOS Device/"
-cp -R "${BUILD_DIR}/Debug-iphoneos"/* "${DEST_DIR}/iOS Simulator/"
+cp -R "${BUILD_DIR}/Release"/* "${DEST_DIR}/Mac arm64/"
+cp -R "${BUILD_DIR}/Release"/* "${DEST_DIR}/Mac x86-64/"
+cp -R "${BUILD_DIR}/Release-iphoneos"/* "${DEST_DIR}/iOS Device/"
+cp -R "${BUILD_DIR}/Release-iphoneos"/* "${DEST_DIR}/iOS Simulator/"
 
 # Zip the destination directory
 cd "${SCRIPTS_DIR}"
