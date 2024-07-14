@@ -92,7 +92,8 @@
 		521A9DC62C163C7B0041B0D7 /* PluginMainCocoa.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PluginMainCocoa.mm; sourceTree = "<group>"; };
 		521A9DC72C163C7B0041B0D7 /* PluginMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PluginMain.cpp; sourceTree = "<group>"; };
 		521A9E6B2C163CB00041B0D7 /* XOJO_TRMetalImageView_Plugin-macOS.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = "XOJO_TRMetalImageView_Plugin-macOS.mm"; sourceTree = "<group>"; };
-		526081232C4331EB00DCFB60 /* Scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Scripts; sourceTree = "<group>"; };
+		526081242C434D0D00DCFB60 /* Plugin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Plugin; sourceTree = "<group>"; };
+		526081292C434DC300DCFB60 /* Build_and_Package_Plugin.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Build_and_Package_Plugin.sh; sourceTree = "<group>"; };
 		528A7D952C33876500186058 /* XOJO_TRMetalImageView_Plugin-iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XOJO_TRMetalImageView_Plugin-iOS.h"; sourceTree = "<group>"; };
 		52B8841A2C2DB20A001CEB64 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		52B884672C30ABC4001CEB64 /* PrefixHeader-iOS.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PrefixHeader-iOS.pch"; sourceTree = "<group>"; };
@@ -146,12 +147,13 @@
 		521A9CD42C163C500041B0D7 = {
 			isa = PBXGroup;
 			children = (
+				526081242C434D0D00DCFB60 /* Plugin */,
 				52B884672C30ABC4001CEB64 /* PrefixHeader-iOS.pch */,
 				521A9CDF2C163C500041B0D7 /* XOJO TRMetalImageView Plugin */,
 				521A9E6D2C1640DA0041B0D7 /* TRMetalImageView */,
 				521A9E6A2C163C840041B0D7 /* PluginSDK */,
 				521A9CDE2C163C500041B0D7 /* Products */,
-				526081232C4331EB00DCFB60 /* Scripts */,
+				526081272C434D7600DCFB60 /* Build Scripts */,
 				521A9E7A2C1641000041B0D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -237,6 +239,14 @@
 				52B8841A2C2DB20A001CEB64 /* Foundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		526081272C434D7600DCFB60 /* Build Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				526081292C434DC300DCFB60 /* Build_and_Package_Plugin.sh */,
+			);
+			path = "Build Scripts";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,7 +375,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n\"${SRCROOT}/scripts/Build_and_Package_Plugin.sh\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n\"${SRCROOT}/Build Scripts/Build_and_Package_Plugin.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

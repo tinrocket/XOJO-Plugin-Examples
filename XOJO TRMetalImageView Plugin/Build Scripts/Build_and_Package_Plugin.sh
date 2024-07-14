@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define variables
-SCRIPTS_DIR="${SRCROOT}/Scripts"
+SCRIPTS_DIR="${SRCROOT}/Plugin/"
 BUILD_DIR="${CONFIGURATION_BUILD_DIR}/.."
 PRODUCT_NAME="${PRODUCT_NAME}"
 DEST_DIR="${SCRIPTS_DIR}/${PRODUCT_NAME}_Package/Build Resources/"
