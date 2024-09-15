@@ -149,7 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				526081242C434D0D00DCFB60 /* Plugin */,
-				52B884672C30ABC4001CEB64 /* PrefixHeader-iOS.pch */,
 				521A9CDF2C163C500041B0D7 /* XOJO Tinrocket Common Plugin */,
 				521A9E6A2C163C840041B0D7 /* PluginSDK */,
 				521A9CDE2C163C500041B0D7 /* Products */,
@@ -171,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				521A9E6D2C1640DA0041B0D7 /* TRMetalImageView */,
+				52B884672C30ABC4001CEB64 /* PrefixHeader-iOS.pch */,
 			);
 			path = "XOJO Tinrocket Common Plugin";
 			sourceTree = "<group>";
@@ -216,8 +216,8 @@
 		521A9E6D2C1640DA0041B0D7 /* TRMetalImageView */ = {
 			isa = PBXGroup;
 			children = (
-				5299A07C2C9745730063422B /* Plugin Part */,
-				5299A07B2C97455A0063422B /* Source Part */,
+				5299A07C2C9745730063422B /* Plugin */,
+				5299A07B2C97455A0063422B /* Source */,
 			);
 			path = TRMetalImageView;
 			sourceTree = "<group>";
@@ -246,7 +246,7 @@
 			path = "Build Scripts";
 			sourceTree = "<group>";
 		};
-		5299A07B2C97455A0063422B /* Source Part */ = {
+		5299A07B2C97455A0063422B /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				52EE023B2C1795A500771DAA /* TRMetalImageView.h */,
@@ -254,17 +254,17 @@
 				52EE023C2C1795A500771DAA /* TRMetalImageViewLayer.h */,
 				52EE023D2C1795A500771DAA /* TRMetalImageViewLayer.m */,
 			);
-			path = "Source Part";
+			path = Source;
 			sourceTree = "<group>";
 		};
-		5299A07C2C9745730063422B /* Plugin Part */ = {
+		5299A07C2C9745730063422B /* Plugin */ = {
 			isa = PBXGroup;
 			children = (
 				521A9E6B2C163CB00041B0D7 /* XOJO_TRMetalImageView_Plugin-macOS.mm */,
 				528A7D952C33876500186058 /* XOJO_TRMetalImageView_Plugin-iOS.h */,
 				52FCE4002C30B43F004BC698 /* XOJO_TRMetalImageView_Plugin-iOS.mm */,
 			);
-			path = "Plugin Part";
+			path = Plugin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -615,7 +615,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PrefixHeader-iOS.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)//XOJO Tinrocket Common Plugin/PrefixHeader-iOS.pch";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				ONLY_ACTIVE_ARCH = NO;
@@ -638,7 +638,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PrefixHeader-iOS.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)//XOJO Tinrocket Common Plugin/PrefixHeader-iOS.pch";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				ONLY_ACTIVE_ARCH = NO;
