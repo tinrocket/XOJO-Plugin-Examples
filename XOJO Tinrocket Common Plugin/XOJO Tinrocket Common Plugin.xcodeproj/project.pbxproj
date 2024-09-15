@@ -28,11 +28,11 @@
 		521A9E542C163C7B0041B0D7 /* rb_plugin_cocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = 521A9DC42C163C7B0041B0D7 /* rb_plugin_cocoa.h */; };
 		521A9E552C163C7B0041B0D7 /* PluginMainCocoa.mm in Sources */ = {isa = PBXBuildFile; fileRef = 521A9DC62C163C7B0041B0D7 /* PluginMainCocoa.mm */; };
 		521A9E562C163C7B0041B0D7 /* PluginMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 521A9DC72C163C7B0041B0D7 /* PluginMain.cpp */; };
-		528A7D962C33876500186058 /* TinrocketCommon-Plugin-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 528A7D952C33876500186058 /* TinrocketCommon-Plugin-iOS.h */; };
+		5265F3C82C97554500C4438E /* TinrocketCommon-Plugin-macOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 521A9E6B2C163CB00041B0D7 /* TinrocketCommon-Plugin-macOS.mm */; };
+		5265F3C92C97554900C4438E /* TinrocketCommon-Plugin-iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE4002C30B43F004BC698 /* TinrocketCommon-Plugin-iOS.mm */; };
+		5265F3CA2C97554B00C4438E /* TinrocketCommon-Plugin-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 528A7D952C33876500186058 /* TinrocketCommon-Plugin-iOS.h */; };
 		528A7D972C33876500186058 /* TinrocketCommon-Plugin-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 528A7D952C33876500186058 /* TinrocketCommon-Plugin-iOS.h */; };
 		528A7D982C33876800186058 /* TinrocketCommon-Plugin-macOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 521A9E6B2C163CB00041B0D7 /* TinrocketCommon-Plugin-macOS.mm */; };
-		528A7D992C33876800186058 /* TinrocketCommon-Plugin-iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE4002C30B43F004BC698 /* TinrocketCommon-Plugin-iOS.mm */; };
-		52B884692C30ADA5001CEB64 /* TinrocketCommon-Plugin-macOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 521A9E6B2C163CB00041B0D7 /* TinrocketCommon-Plugin-macOS.mm */; };
 		52EE023F2C1795A500771DAA /* TRMetalImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 52EE023B2C1795A500771DAA /* TRMetalImageView.h */; };
 		52EE02402C1795A500771DAA /* TRMetalImageViewLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 52EE023C2C1795A500771DAA /* TRMetalImageViewLayer.h */; };
 		52EE02412C1795A500771DAA /* TRMetalImageViewLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EE023D2C1795A500771DAA /* TRMetalImageViewLayer.m */; };
@@ -53,7 +53,7 @@
 		52FCE42F2C32E70C004BC698 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FCE42C2C32E70C004BC698 /* Metal.framework */; };
 		52FCE4312C32E712004BC698 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FCE4302C32E712004BC698 /* Foundation.framework */; };
 		52FCE4332C32E720004BC698 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FCE4322C32E720004BC698 /* CoreImage.framework */; };
-		52FCE4342C32E8DA004BC698 /* PrefixHeader-iOS.pch in Headers */ = {isa = PBXBuildFile; fileRef = 52B884672C30ABC4001CEB64 /* PrefixHeader-iOS.pch */; };
+		52FCE4342C32E8DA004BC698 /* TinrocketCommon-PrefixHeader-iOS.pch in Headers */ = {isa = PBXBuildFile; fileRef = 52B884672C30ABC4001CEB64 /* TinrocketCommon-PrefixHeader-iOS.pch */; };
 		52FCE43B2C32EB41004BC698 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FCE4302C32E712004BC698 /* Foundation.framework */; };
 		52FCE43F2C32EB53004BC698 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B8841A2C2DB20A001CEB64 /* Foundation.framework */; };
 		52FCE4402C32EB54004BC698 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B8841A2C2DB20A001CEB64 /* Foundation.framework */; };
@@ -97,7 +97,7 @@
 		526081702C436E4400DCFB60 /* Clean_Builds_Directory.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Clean_Builds_Directory.sh; sourceTree = "<group>"; };
 		528A7D952C33876500186058 /* TinrocketCommon-Plugin-iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TinrocketCommon-Plugin-iOS.h"; sourceTree = "<group>"; };
 		52B8841A2C2DB20A001CEB64 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		52B884672C30ABC4001CEB64 /* PrefixHeader-iOS.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PrefixHeader-iOS.pch"; sourceTree = "<group>"; };
+		52B884672C30ABC4001CEB64 /* TinrocketCommon-PrefixHeader-iOS.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TinrocketCommon-PrefixHeader-iOS.pch"; sourceTree = "<group>"; };
 		52EE023B2C1795A500771DAA /* TRMetalImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMetalImageView.h; sourceTree = "<group>"; };
 		52EE023C2C1795A500771DAA /* TRMetalImageViewLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMetalImageViewLayer.h; sourceTree = "<group>"; };
 		52EE023D2C1795A500771DAA /* TRMetalImageViewLayer.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; path = TRMetalImageViewLayer.m; sourceTree = "<group>"; };
@@ -169,8 +169,11 @@
 		521A9CDF2C163C500041B0D7 /* XOJO Tinrocket Common Plugin */ = {
 			isa = PBXGroup;
 			children = (
+				52B884672C30ABC4001CEB64 /* TinrocketCommon-PrefixHeader-iOS.pch */,
+				528A7D952C33876500186058 /* TinrocketCommon-Plugin-iOS.h */,
+				52FCE4002C30B43F004BC698 /* TinrocketCommon-Plugin-iOS.mm */,
+				521A9E6B2C163CB00041B0D7 /* TinrocketCommon-Plugin-macOS.mm */,
 				521A9E6D2C1640DA0041B0D7 /* TRMetalImageView */,
-				52B884672C30ABC4001CEB64 /* PrefixHeader-iOS.pch */,
 			);
 			path = "XOJO Tinrocket Common Plugin";
 			sourceTree = "<group>";
@@ -260,9 +263,6 @@
 		5299A07C2C9745730063422B /* Plugin */ = {
 			isa = PBXGroup;
 			children = (
-				521A9E6B2C163CB00041B0D7 /* TinrocketCommon-Plugin-macOS.mm */,
-				528A7D952C33876500186058 /* TinrocketCommon-Plugin-iOS.h */,
-				52FCE4002C30B43F004BC698 /* TinrocketCommon-Plugin-iOS.mm */,
 			);
 			path = Plugin;
 			sourceTree = "<group>";
@@ -279,7 +279,7 @@
 				521A9E512C163C7B0041B0D7 /* REALplugin.h in Headers */,
 				52FCE4102C31E98F004BC698 /* rb_plugin.h in Headers */,
 				521A9E542C163C7B0041B0D7 /* rb_plugin_cocoa.h in Headers */,
-				528A7D962C33876500186058 /* TinrocketCommon-Plugin-iOS.h in Headers */,
+				5265F3CA2C97554B00C4438E /* TinrocketCommon-Plugin-iOS.h in Headers */,
 				52EE023F2C1795A500771DAA /* TRMetalImageView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +291,7 @@
 				52FCE4242C32E5F1004BC698 /* REALplugin.h in Headers */,
 				52FCE4252C32E5F6004BC698 /* rb_plugin_cpp.h in Headers */,
 				52FCE4262C32E5F6004BC698 /* rb_plugin.h in Headers */,
-				52FCE4342C32E8DA004BC698 /* PrefixHeader-iOS.pch in Headers */,
+				52FCE4342C32E8DA004BC698 /* TinrocketCommon-PrefixHeader-iOS.pch in Headers */,
 				528A7D972C33876500186058 /* TinrocketCommon-Plugin-iOS.h in Headers */,
 				52FCE4232C32E5ED004BC698 /* iOSPrefixHeader.h in Headers */,
 				52FCE41F2C32E5E7004BC698 /* TRMetalImageViewLayer.h in Headers */,
@@ -403,8 +403,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				521A9E562C163C7B0041B0D7 /* PluginMain.cpp in Sources */,
-				528A7D992C33876800186058 /* TinrocketCommon-Plugin-iOS.mm in Sources */,
-				52B884692C30ADA5001CEB64 /* TinrocketCommon-Plugin-macOS.mm in Sources */,
+				5265F3C92C97554900C4438E /* TinrocketCommon-Plugin-iOS.mm in Sources */,
+				5265F3C82C97554500C4438E /* TinrocketCommon-Plugin-macOS.mm in Sources */,
 				52EE02422C1795A500771DAA /* TRMetalImageView.m in Sources */,
 				52EE02412C1795A500771DAA /* TRMetalImageViewLayer.m in Sources */,
 				521A9E552C163C7B0041B0D7 /* PluginMainCocoa.mm in Sources */,
@@ -615,7 +615,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)//XOJO Tinrocket Common Plugin/PrefixHeader-iOS.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)//XOJO Tinrocket Common Plugin/TinrocketCommon-PrefixHeader-iOS.pch";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				ONLY_ACTIVE_ARCH = NO;
@@ -638,7 +638,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)//XOJO Tinrocket Common Plugin/PrefixHeader-iOS.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)//XOJO Tinrocket Common Plugin/TinrocketCommon-PrefixHeader-iOS.pch";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				ONLY_ACTIVE_ARCH = NO;
