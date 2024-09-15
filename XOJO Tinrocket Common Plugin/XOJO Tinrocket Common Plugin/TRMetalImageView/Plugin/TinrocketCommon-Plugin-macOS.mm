@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include "rb_plugin.h"
 #import "TRMetalImageView.h"
-#include "XOJO_TRMetalImageView_Plugin-iOS.h"
+#include "TinrocketCommon-Plugin-iOS.h"
 
 #if COCOA
 	// To keep this example simple, this file will need to be compiled as Obj-C++
