@@ -15,8 +15,8 @@
                   <BuildableReference
                      BuildableIdentifier = "primary"
                      BlueprintIdentifier = "5234499B2C4328B40093C08A"
-                     BuildableName = "TRMetalImageView.xojo_plugin"
-                     BlueprintName = "TRMetalImageView.xojo_plugin"
+                     BuildableName = "TinrocketCommon.xojo_plugin"
+                     BlueprintName = "TinrocketCommon.xojo_plugin"
                      ReferencedContainer = "container:XOJO Tinrocket Common Plugin.xcodeproj">
                   </BuildableReference>
                </EnvironmentBuildable>
@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5234499B2C4328B40093C08A"
-               BuildableName = "TRMetalImageView.xojo_plugin"
-               BlueprintName = "TRMetalImageView.xojo_plugin"
+               BuildableName = "TinrocketCommon.xojo_plugin"
+               BlueprintName = "TinrocketCommon.xojo_plugin"
                ReferencedContainer = "container:XOJO Tinrocket Common Plugin.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -68,8 +68,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5234499B2C4328B40093C08A"
-            BuildableName = "TRMetalImageView.xojo_plugin"
-            BlueprintName = "TRMetalImageView.xojo_plugin"
+            BuildableName = "TinrocketCommon.xojo_plugin"
+            BlueprintName = "TinrocketCommon.xojo_plugin"
             ReferencedContainer = "container:XOJO Tinrocket Common Plugin.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

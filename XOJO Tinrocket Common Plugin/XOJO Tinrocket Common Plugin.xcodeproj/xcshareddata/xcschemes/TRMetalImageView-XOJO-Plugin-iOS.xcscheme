@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "52FCE4142C32E5CE004BC698"
-               BuildableName = "libTRMetalImageView-XOJO-Plugin-iOS.dylib"
-               BlueprintName = "TRMetalImageView-XOJO-Plugin-iOS"
+               BuildableName = "libTinrocketCommon-Plugin-iOS.dylib"
+               BlueprintName = "TinrocketCommon-Plugin-iOS"
                ReferencedContainer = "container:XOJO Tinrocket Common Plugin.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
