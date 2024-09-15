@@ -5,24 +5,6 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
-      <PreActions>
-         <ExecutionAction
-            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
-            <ActionContent
-               title = "Run Script"
-               scriptText = "# Type a script or drag a script file from your workspace to insert its path.&#10;&#10;&quot;${SRCROOT}/Build Scripts/Clean_Builds_Directory.sh&quot;&#10;">
-               <EnvironmentBuildable>
-                  <BuildableReference
-                     BuildableIdentifier = "primary"
-                     BlueprintIdentifier = "5234499B2C4328B40093C08A"
-                     BuildableName = "TRMetalImageView.xojo_plugin"
-                     BlueprintName = "TRMetalImageView.xojo_plugin"
-                     ReferencedContainer = "container:XOJO TRMetalImageView Plugin.xcodeproj">
-                  </BuildableReference>
-               </EnvironmentBuildable>
-            </ActionContent>
-         </ExecutionAction>
-      </PreActions>
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -32,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5234499B2C4328B40093C08A"
-               BuildableName = "TRMetalImageView.xojo_plugin"
-               BlueprintName = "TRMetalImageView.xojo_plugin"
-               ReferencedContainer = "container:XOJO TRMetalImageView Plugin.xcodeproj">
+               BlueprintIdentifier = "521A9CDC2C163C500041B0D7"
+               BuildableName = "libTRMetalImageView-XOJO-Plugin-macOS.dylib"
+               BlueprintName = "TRMetalImageView-XOJO-Plugin-macOS"
+               ReferencedContainer = "container:XOJO Tinrocket Common Plugin.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -48,7 +30,7 @@
       shouldAutocreateTestPlan = "YES">
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -67,10 +49,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5234499B2C4328B40093C08A"
-            BuildableName = "TRMetalImageView.xojo_plugin"
-            BlueprintName = "TRMetalImageView.xojo_plugin"
-            ReferencedContainer = "container:XOJO TRMetalImageView Plugin.xcodeproj">
+            BlueprintIdentifier = "521A9CDC2C163C500041B0D7"
+            BuildableName = "libTRMetalImageView-XOJO-Plugin-macOS.dylib"
+            BlueprintName = "TRMetalImageView-XOJO-Plugin-macOS"
+            ReferencedContainer = "container:XOJO Tinrocket Common Plugin.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

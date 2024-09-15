@@ -340,7 +340,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 521A9CD82C163C500041B0D7 /* Build configuration list for PBXProject "XOJO TRMetalImageView Plugin" */;
+			buildConfigurationList = 521A9CD82C163C500041B0D7 /* Build configuration list for PBXProject "XOJO Tinrocket Common Plugin" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -638,7 +638,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		521A9CD82C163C500041B0D7 /* Build configuration list for PBXProject "XOJO TRMetalImageView Plugin" */ = {
+		521A9CD82C163C500041B0D7 /* Build configuration list for PBXProject "XOJO Tinrocket Common Plugin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				521A9CE42C163C500041B0D7 /* Debug */,
