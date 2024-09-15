@@ -1,13 +1,12 @@
 //
-//  XOJO_TRMetalImageView_Plugin-iOS.h
-//  EyeControl
+//  TinrocketCommon-Plugin-iOS-iOS.h
 //
 //  Created by John Balestrieri on 7/1/24.
 //
 
-#ifndef XOJO_TRMetalImageView_Plugin_iOS_h
-#define XOJO_TRMetalImageView_Plugin_iOS_h
+#ifndef TinrocketCommon-Plugin-iOS_h
+#define TinrocketCommon-Plugin-iOS_h
 
 void RegisteriOSControl(void);
 
-#endif /* XOJO_TRMetalImageView_Plugin_iOS_h */
+#endif /* TinrocketCommon-Plugin-iOS_h */
