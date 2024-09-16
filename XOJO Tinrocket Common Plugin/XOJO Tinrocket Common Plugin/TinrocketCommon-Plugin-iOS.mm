@@ -9,8 +9,11 @@
 #include "rb_plugin.h"
 #include "TinrocketCommon-Plugin-iOS.h"
 #import "TRMetalImageView-Plugin-iOS.h"
+#import "TRFoundation-Plugin.h"
 
 
 void RegisteriOSPlugin( void ) {
 	RegisterTRMetalImageView_iOS();
+	
+	RegisterTRFoundation();
 }

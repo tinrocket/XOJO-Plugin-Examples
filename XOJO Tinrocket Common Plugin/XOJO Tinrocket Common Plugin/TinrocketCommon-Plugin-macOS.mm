@@ -7,8 +7,9 @@
 
 #include <stdio.h>
 #include "rb_plugin.h"
-#import "TRMetalImageView-Plugin-macOS.h"
 #include "TinrocketCommon-Plugin-iOS.h"
+#import "TRMetalImageView-Plugin-macOS.h"
+#import "TRFoundation-Plugin.h"
 
 
 
@@ -26,6 +27,8 @@
 
 void PluginEntry( void ) {
 	RegisterTRMetalImageView_macOS();
+	
+	RegisterTRFoundation();
 	
 	RegisteriOSPlugin();
 }
