@@ -5,6 +5,8 @@
 //  Created by John Balestrieri on 9/15/24.
 //
 
+#include <stdio.h>
+#include "rb_plugin.h"
 #import "TRMetalImageView-Plugin-macOS.h"
 #import "TRMetalImageView.h"
 
@@ -197,7 +199,6 @@ static void * TRMetalImageView_handle_getter( REALcontrolInstance control ) {
 
 #pragma mark - Public
 
-// Registration function
 void RegisterTRMetalImageView_macOS() {
 	REALRegisterControl(&TRMetalImageView_Struct);
 }

@@ -5,6 +5,8 @@
 //  Created by John Balestrieri on 9/15/24.
 //
 
+#include <stdio.h>
+#include "rb_plugin.h"
 #import "TRMetalImageView-Plugin-iOS.h"
 #import "TRMetalImageView.h"
 
