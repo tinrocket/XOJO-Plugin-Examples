@@ -198,7 +198,7 @@ static void * TRMetalImageView_handle_getter( REALcontrolInstance control ) {
 #pragma mark - Public
 
 // Registration function
-void RegisterTRMetalImageView() {
+void RegisterTRMetalImageView_macOS() {
 	REALRegisterControl(&TRMetalImageView_Struct);
 }
 

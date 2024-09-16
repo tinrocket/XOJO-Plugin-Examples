@@ -11,6 +11,6 @@
 #import "TRMetalImageView-Plugin-iOS.h"
 
 
-void RegisteriOSControl( void ) {
+void RegisteriOSPlugin( void ) {
 	RegisterTRMetalImageView_iOS();
 }

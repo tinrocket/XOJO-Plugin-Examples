@@ -8,5 +8,4 @@
 #include <stdio.h>
 #include "rb_plugin.h"
 
-// Declare registration function
 void RegisterTRMetalImageView_iOS();

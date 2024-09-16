@@ -25,6 +25,7 @@
 
 
 void PluginEntry( void ) {
-	RegisterTRMetalImageView();
-	RegisteriOSControl();
+	RegisterTRMetalImageView_macOS();
+	
+	RegisteriOSPlugin();
 }
