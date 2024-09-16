@@ -70,18 +70,6 @@ static REALmobileControl TRMetalImageView_Struct = {
 	TRMetalImageView_Methods, sizeof(TRMetalImageView_Methods) / sizeof(REALmethodDefinition),
 	NULL, 0,
 	&TRMetalImageView_Behaviour_iOS,
-	
-	
-//	kCurrentREALControlVersion,
-//	"MobileEyeControl",
-//	sizeof(TRMetalImageView_Data),
-//	REALenabledControl | REALcontrolIsHIViewCompatible,
-//	0, 0,	// This is the BMP name, so the IDE will try and find 0.bmp in IDE Resources->Controls Palette folder in the RBX plugin
-//	80, 50,
-//	TRMetalImageView_Properties, sizeof(TRMetalImageView_Properties) / sizeof(REALproperty),
-//	TRMetalImageView_Methods, sizeof(TRMetalImageView_Methods) / sizeof(REALmethodDefinition),
-//	NULL, 0,
-//	&TRMetalImageView_Behaviour,
 };
 
 
