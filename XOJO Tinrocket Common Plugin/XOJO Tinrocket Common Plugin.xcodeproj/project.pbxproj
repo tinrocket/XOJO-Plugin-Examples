@@ -35,6 +35,10 @@
 		5265F3CD2C9756D600C4438E /* TRMetalImageView-Plugin-macOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5265F3CB2C9756CB00C4438E /* TRMetalImageView-Plugin-macOS.mm */; };
 		5265F3CF2C9756FB00C4438E /* TRMetalImageView-Plugin-macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 5265F3CE2C9756FB00C4438E /* TRMetalImageView-Plugin-macOS.h */; };
 		5265F3D02C9756FB00C4438E /* TRMetalImageView-Plugin-macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 5265F3CE2C9756FB00C4438E /* TRMetalImageView-Plugin-macOS.h */; };
+		5265F3EB2C97CA9000C4438E /* TRMetalImageView-Plugin-iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5265F3E92C97CA9000C4438E /* TRMetalImageView-Plugin-iOS.mm */; };
+		5265F3EC2C97CA9000C4438E /* TRMetalImageView-Plugin-iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5265F3E92C97CA9000C4438E /* TRMetalImageView-Plugin-iOS.mm */; };
+		5265F3ED2C97CA9000C4438E /* TRMetalImageView-Plugin-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 5265F3EA2C97CA9000C4438E /* TRMetalImageView-Plugin-iOS.h */; };
+		5265F3EE2C97CA9000C4438E /* TRMetalImageView-Plugin-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 5265F3EA2C97CA9000C4438E /* TRMetalImageView-Plugin-iOS.h */; };
 		528A7D972C33876500186058 /* TinrocketCommon-Plugin-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 528A7D952C33876500186058 /* TinrocketCommon-Plugin-iOS.h */; };
 		528A7D982C33876800186058 /* TinrocketCommon-Plugin-macOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 521A9E6B2C163CB00041B0D7 /* TinrocketCommon-Plugin-macOS.mm */; };
 		52EE023F2C1795A500771DAA /* TRMetalImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 52EE023B2C1795A500771DAA /* TRMetalImageView.h */; };
@@ -101,6 +105,8 @@
 		526081702C436E4400DCFB60 /* Clean_Builds_Directory.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Clean_Builds_Directory.sh; sourceTree = "<group>"; };
 		5265F3CB2C9756CB00C4438E /* TRMetalImageView-Plugin-macOS.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "TRMetalImageView-Plugin-macOS.mm"; sourceTree = "<group>"; };
 		5265F3CE2C9756FB00C4438E /* TRMetalImageView-Plugin-macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TRMetalImageView-Plugin-macOS.h"; sourceTree = "<group>"; };
+		5265F3E92C97CA9000C4438E /* TRMetalImageView-Plugin-iOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "TRMetalImageView-Plugin-iOS.mm"; sourceTree = "<group>"; };
+		5265F3EA2C97CA9000C4438E /* TRMetalImageView-Plugin-iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TRMetalImageView-Plugin-iOS.h"; sourceTree = "<group>"; };
 		528A7D952C33876500186058 /* TinrocketCommon-Plugin-iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TinrocketCommon-Plugin-iOS.h"; sourceTree = "<group>"; };
 		52B8841A2C2DB20A001CEB64 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		52B884672C30ABC4001CEB64 /* TinrocketCommon-PrefixHeader-iOS.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TinrocketCommon-PrefixHeader-iOS.pch"; sourceTree = "<group>"; };
@@ -271,6 +277,8 @@
 			children = (
 				5265F3CE2C9756FB00C4438E /* TRMetalImageView-Plugin-macOS.h */,
 				5265F3CB2C9756CB00C4438E /* TRMetalImageView-Plugin-macOS.mm */,
+				5265F3EA2C97CA9000C4438E /* TRMetalImageView-Plugin-iOS.h */,
+				5265F3E92C97CA9000C4438E /* TRMetalImageView-Plugin-iOS.mm */,
 			);
 			path = Plugin;
 			sourceTree = "<group>";
@@ -285,6 +293,7 @@
 				5265F3CF2C9756FB00C4438E /* TRMetalImageView-Plugin-macOS.h in Headers */,
 				521A9E4B2C163C7B0041B0D7 /* rb_plugin_cpp.h in Headers */,
 				52EE02402C1795A500771DAA /* TRMetalImageViewLayer.h in Headers */,
+				5265F3ED2C97CA9000C4438E /* TRMetalImageView-Plugin-iOS.h in Headers */,
 				521A9E512C163C7B0041B0D7 /* REALplugin.h in Headers */,
 				52FCE4102C31E98F004BC698 /* rb_plugin.h in Headers */,
 				521A9E542C163C7B0041B0D7 /* rb_plugin_cocoa.h in Headers */,
@@ -297,6 +306,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5265F3EE2C97CA9000C4438E /* TRMetalImageView-Plugin-iOS.h in Headers */,
 				52FCE4242C32E5F1004BC698 /* REALplugin.h in Headers */,
 				5265F3D02C9756FB00C4438E /* TRMetalImageView-Plugin-macOS.h in Headers */,
 				52FCE4252C32E5F6004BC698 /* rb_plugin_cpp.h in Headers */,
@@ -413,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5265F3CC2C9756CB00C4438E /* TRMetalImageView-Plugin-macOS.mm in Sources */,
+				5265F3EB2C97CA9000C4438E /* TRMetalImageView-Plugin-iOS.mm in Sources */,
 				521A9E562C163C7B0041B0D7 /* PluginMain.cpp in Sources */,
 				5265F3C92C97554900C4438E /* TinrocketCommon-Plugin-iOS.mm in Sources */,
 				5265F3C82C97554500C4438E /* TinrocketCommon-Plugin-macOS.mm in Sources */,
@@ -429,6 +440,7 @@
 				52FCE4202C32E5E7004BC698 /* TRMetalImageView.m in Sources */,
 				5265F3CD2C9756D600C4438E /* TRMetalImageView-Plugin-macOS.mm in Sources */,
 				52FCE4222C32E5E7004BC698 /* TRMetalImageViewLayer.m in Sources */,
+				5265F3EC2C97CA9000C4438E /* TRMetalImageView-Plugin-iOS.mm in Sources */,
 				52FCE4272C32E5FA004BC698 /* PluginMain.cpp in Sources */,
 				528A7D982C33876800186058 /* TinrocketCommon-Plugin-macOS.mm in Sources */,
 				52FCE4482C32F51C004BC698 /* TinrocketCommon-Plugin-iOS.mm in Sources */,

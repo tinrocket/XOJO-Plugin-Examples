@@ -1,6 +1,6 @@
 //
-//  TRMetalImageView-Plugin-macOS.m
-//  TRMetalImageView-XOJO-Plugin-macOS
+//  TRMetalImageView-Plugin-macOS.mm
+//  XOJO Tinrocket Common Plugin
 //
 //  Created by John Balestrieri on 9/15/24.
 //

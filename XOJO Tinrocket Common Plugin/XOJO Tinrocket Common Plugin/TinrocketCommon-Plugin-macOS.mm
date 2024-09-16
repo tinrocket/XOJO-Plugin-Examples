@@ -10,6 +10,8 @@
 #import "TRMetalImageView-Plugin-macOS.h"
 #include "TinrocketCommon-Plugin-iOS.h"
 
+
+
 #if COCOA
 	// To keep this example simple, this file will need to be compiled as Obj-C++
 	// in Xcode. In your shipping plugin, you will most likely want to separate
@@ -20,7 +22,7 @@
 	#endif
 #endif
 
-//#define GET_CONTROL_DATA(A) (TRMetalImageView_Data *)REALGetControlData( A, &TRMetalImageView_Struct );
+
 
 void PluginEntry( void ) {
 	RegisterTRMetalImageView();
