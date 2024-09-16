@@ -8,6 +8,8 @@
 #import "TRMetalImageView-Plugin-macOS.h"
 #import "TRMetalImageView.h"
 
+
+
 static void TRMetalImageView_initializer(REALcontrolInstance);
 static void TRMetalImageView_finalizer(REALcontrolInstance);
 
@@ -22,6 +24,8 @@ static BOOL TRMetalImageView_clearBeforeDrawing_getter(REALcontrolInstance);
 static void TRMetalImageView_clearBeforeDrawing_setter(REALcontrolInstance, void *, BOOL);
 static void TRMetalImageView_configureForFasterDrawing(REALcontrolInstance);
 static void TRMetalImageView_configureForVideo(REALcontrolInstance);
+
+
 
 #pragma mark - Data Structures
 

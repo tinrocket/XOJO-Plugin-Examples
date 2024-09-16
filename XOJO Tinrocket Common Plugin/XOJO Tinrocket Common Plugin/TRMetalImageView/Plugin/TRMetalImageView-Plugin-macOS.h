@@ -10,7 +10,6 @@
 
 #include <stdio.h>
 #include "rb_plugin.h"
-#include <REALplugin.h> // Include necessary XOJO headers
 
 // Declare registration function
 void RegisterTRMetalImageView();
