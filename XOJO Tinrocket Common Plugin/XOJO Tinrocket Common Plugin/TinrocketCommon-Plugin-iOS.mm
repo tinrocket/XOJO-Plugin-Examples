@@ -13,7 +13,9 @@
 
 
 void RegisteriOSPlugin( void ) {
+	// Controls
 	RegisterTRMetalImageView_iOS();
 	
+	// Cross-platform
 	RegisterTRFoundation();
 }
