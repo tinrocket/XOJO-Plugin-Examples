@@ -26,12 +26,12 @@
 
 
 void PluginEntry( void ) {
-	// Controls
-	RegisterTRMetalImageView_macOS();
-	
 	// Cross-platform
 	RegisterTRFoundation();
-	
-	// All iOS Plugins
+
+	// macOS
+	RegisterTRMetalImageView_macOS();
+		
+	// iOS
 	RegisteriOSPlugin();
 }

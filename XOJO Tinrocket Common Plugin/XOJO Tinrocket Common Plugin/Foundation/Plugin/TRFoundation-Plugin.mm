@@ -16,6 +16,15 @@
 static void NSValueTRC_Initializer( REALobject instance );
 static void NSValueTRC_Finalizer( REALobject instance );
 
+
+REALconstant NSValueTRC_Constants[] = {
+//	{ "kNumberOfBones as UInt32 = 206" },
+//	{ "kMagicColor as Color = &cFF00FF" },
+//	{ "kDefaultCatName as String = \"Pixel\"" },
+//	{ "kPi as Double = 3.14159265" },
+};
+
+
 REALproperty NSValueTRC_Properties[] = {
 //	{ "", "CatName", "String", REALconsoleSafe, REALstandardGetter, REALstandardSetter, FieldOffset( TestClassData, mCatName ) },
 //	{ "", "HumanName", "String", REALconsoleSafe, (REALproc)HumanNameGetter, nil },
@@ -53,46 +62,25 @@ REALclassDefinition NSValueTRC_Definition = {
 	(REALproc)NSValueTRC_Initializer, // If your class needs to initialize any of its instance data, then you can specify an initializer method.
 	(REALproc)NSValueTRC_Finalizer, 	// If your class needs to finalize any of its instance data, the you can specify a finalizer method.
 	NSValueTRC_Properties, // Properties
-	_countof(NSValueTRC_Properties),
+	_countof(NSValueTRC_Properties), // Count
 	NSValueTRC_Methods, // Methods
-	_countof(NSValueTRC_Methods),
-
-	// Events which the user implements
-	TestClassEvents,
-	_countof( TestClassEvents ),
-
-	// Event instances, which we are skipping over.  Whenever
-	// you want to skip over a field within the structure, you
-	// can replace it with nil values, like this:
-	nil,
+	_countof(NSValueTRC_Methods), // Count
+	NSValueTRC_Events, // Events which the user implements
+	_countof(NSValueTRC_Events), // Count
+	nil, // Event instances, which we are skipping over
+	0, // Count
+	nil, // Class instances
+	nil, // The next two fields are for bindings, which are a mystery.
 	0,
-
-	// If the class implements any interfaces, then you can
-	// list the interface names here (separate multiple names
-	// with a comma, just like in REALbasic).
-	nil,
-
-	// The next two fields are for bindings, which are a mystery.
-	nil,
-	0,
-
-	// Back to things which get used qith some frequency: Constants!
-	TestClassConstants,
-	_countof( TestClassConstants ),
-
-	// The next field is for flags.  You don't have worry about
-	// setting these.  There are helper methods for any flags
-	// you'd like to set.
-	0,
-
-	// The next field defines shared properties.
-	TestClassSharedProperties,
-	_countof( TestClassSharedProperties ),
-
-	// The final field defined shared methods.
-	TestClassSharedMethods,
-	_countof( TestClassSharedMethods ),
+	NSValueTRC_Constants, // Back to things which get used with some frequency: Constants!
+	_countof(NSValueTRC_Constants),
+	0, // The next field is for flags.  You don't have worry about setting these.  There are helper methods for any flags you'd like to set.
+	NSValueTRC_Properties, // The next field defines shared properties.
+	_countof(NSValueTRC_Properties), // Count
+	NSValueTRC_Methods, // The final field defined shared methods.
+	_countof(NSValueTRC_Methods), // Count
 };
+
 
 
 #pragma mark - Implementation
@@ -124,4 +112,7 @@ static void NSValueTRC_Finalizer( REALobject instance ) {
 #pragma mark - Public
 
 void RegisterTRFoundation() {
+//	SetClassConsoleSafe( &NSValueTRC_Definition );
+	
+	REALRegisterClass( &NSValueTRC_Definition ); // Register our class
 }
