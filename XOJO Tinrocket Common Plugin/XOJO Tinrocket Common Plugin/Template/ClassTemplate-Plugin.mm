@@ -17,6 +17,13 @@ static void NSValueTRC_Initializer( REALobject instance );
 static void NSValueTRC_Finalizer( REALobject instance );
 
 
+#pragma mark - Structures
+
+struct NSValueTRC_Data {
+	NSValue *Handle;
+};
+
+
 REALconstant NSValueTRC_Constants[] = {
 //	{ "kNumberOfBones as UInt32 = 206" },
 //	{ "kMagicColor as Color = &cFF00FF" },
@@ -41,16 +48,20 @@ REALmethodDefinition NSValueTRC_Methods[] = {
 };
 
 
+
 REALevent NSValueTRC_Events[] = {
 };
 
 
-#pragma mark - Structures
-
-struct NSValueTRC_Data {
-	NSValue *Handle;
+// Class (shared) methods
+REALmethodDefinition NSValueTRC_SharedMethods[] = {
+//	{ (REALproc)valueWithPointer, REALnoImplementation, "valueWithPointer(value as Ptr) as NSValueTRC", REALconsoleSafe },
 };
 
+
+// Class (shared) properties
+REALproperty NSValueTRC_SharedProperties[] = {
+};
 
 
 REALclassDefinition NSValueTRC_Definition = {
@@ -75,12 +86,11 @@ REALclassDefinition NSValueTRC_Definition = {
 	NSValueTRC_Constants, // Back to things which get used with some frequency: Constants!
 	_countof(NSValueTRC_Constants),
 	0, // The next field is for flags.  You don't have worry about setting these.  There are helper methods for any flags you'd like to set.
-	NSValueTRC_Properties, // The next field defines shared properties.
-	_countof(NSValueTRC_Properties), // Count
-	NSValueTRC_Methods, // The final field defined shared methods.
-	_countof(NSValueTRC_Methods), // Count
+	NSValueTRC_SharedProperties, // The next field defines shared properties.
+	_countof(NSValueTRC_SharedProperties), // Count
+	NSValueTRC_SharedMethods, // The final field defined shared methods.
+	_countof(NSValueTRC_SharedMethods), // Count
 };
-
 
 
 #pragma mark - Implementation

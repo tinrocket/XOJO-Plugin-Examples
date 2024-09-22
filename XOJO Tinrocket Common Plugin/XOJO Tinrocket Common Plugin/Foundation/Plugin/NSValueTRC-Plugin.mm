@@ -15,6 +15,14 @@
 
 static void NSValueTRC_Initializer( REALobject instance );
 static void NSValueTRC_Finalizer( REALobject instance );
+static REALobject valueWithPointer(void* pointer);
+
+
+#pragma mark - Structures
+
+struct NSValueTRC_Data {
+	NSValue *handle;
+};
 
 
 REALconstant NSValueTRC_Constants[] = {
@@ -22,6 +30,8 @@ REALconstant NSValueTRC_Constants[] = {
 
 
 REALproperty NSValueTRC_Properties[] = {
+	{ "", "Handle", "Ptr", REALconsoleSafe, REALstandardGetter, REALstandardSetter, FieldOffset( NSValueTRC_Data, handle ) },
+//	{ "", "CatName", "String", REALconsoleSafe, REALstandardGetter, REALstandardSetter, FieldOffset( TestClassData, mCatName ) },
 //	{ "", "CatName", "String", REALconsoleSafe, REALstandardGetter, REALstandardSetter, FieldOffset( TestClassData, mCatName ) },
 //	{ "", "HumanName", "String", REALconsoleSafe, (REALproc)HumanNameGetter, nil },
 //	{ "", "MooseName", "String", REALconsoleSafe, (REALproc)MooseNameGetter, (REALproc)MooseNameSetter },
@@ -41,12 +51,15 @@ REALevent NSValueTRC_Events[] = {
 };
 
 
-#pragma mark - Structures
-
-struct NSValueTRC_Data {
-	NSValue *Handle;
+// Class (shared) methods
+REALmethodDefinition NSValueTRC_SharedMethods[] = {
+	{ (REALproc)valueWithPointer, REALnoImplementation, "valueWithPointer(value as Ptr) as NSValueTRC", REALconsoleSafe },
 };
 
+
+// Class (shared) properties
+REALproperty NSValueTRC_SharedProperties[] = {
+};
 
 
 REALclassDefinition NSValueTRC_Definition = {
@@ -71,10 +84,10 @@ REALclassDefinition NSValueTRC_Definition = {
 	NSValueTRC_Constants, // Back to things which get used with some frequency: Constants!
 	_countof(NSValueTRC_Constants),
 	0, // The next field is for flags.  You don't have worry about setting these.  There are helper methods for any flags you'd like to set.
-	NSValueTRC_Properties, // The next field defines shared properties.
-	_countof(NSValueTRC_Properties), // Count
-	NSValueTRC_Methods, // The final field defined shared methods.
-	_countof(NSValueTRC_Methods), // Count
+	NSValueTRC_SharedProperties, // The next field defines shared properties.
+	_countof(NSValueTRC_SharedProperties), // Count
+	NSValueTRC_SharedMethods, // The final field defined shared methods.
+	_countof(NSValueTRC_SharedMethods), // Count
 };
 
 
@@ -86,7 +99,7 @@ static void NSValueTRC_Initializer( REALobject instance ) {
 	// Get the TestClassData from our object
 	ClassData(NSValueTRC_Definition, instance, NSValueTRC_Data, me);
 
-	me->Handle = [NSValue new];
+	me->handle = [NSValue new];
 }
 
 
@@ -95,7 +108,21 @@ static void NSValueTRC_Finalizer( REALobject instance ) {
 	// Get the TestClassData from our object
 	ClassData(NSValueTRC_Definition, instance, NSValueTRC_Data, me);
 
-	me->Handle = nil;
+	me->handle = nil;
+}
+
+
+REALobject valueWithPointer(void* pointer) {
+	// Create a new instance of your NSValueTRC class
+	REALobject newInstance = REALnewInstanceOfClass(&NSValueTRC_Definition);
+
+	NSValue *value = [NSValue valueWithPointer:pointer];
+	
+	// Set the internal data of the new instance
+	bool r = REALSetPropValuePtr(newInstance, "Handle", &value);
+
+	// Return the new instance wrapping the pointer
+	return newInstance;
 }
 
 
