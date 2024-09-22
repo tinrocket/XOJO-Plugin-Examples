@@ -10,6 +10,7 @@
 #include "TinrocketCommon-Plugin-iOS.h"
 #import "TRMetalImageView-Plugin-macOS.h"
 #import "NSValueTRC-Plugin.h"
+#import "SCNMaterialTRC-Plugin.h"
 
 
 
@@ -28,6 +29,7 @@
 void PluginEntry( void ) {
 	// Cross-platform
 	Register_NSValueTRC();
+	Register_SCNMaterialTRC();
 
 	// macOS
 	RegisterTRMetalImageView_macOS();

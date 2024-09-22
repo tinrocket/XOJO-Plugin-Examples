@@ -28,6 +28,10 @@
 		521A9E542C163C7B0041B0D7 /* rb_plugin_cocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = 521A9DC42C163C7B0041B0D7 /* rb_plugin_cocoa.h */; };
 		521A9E552C163C7B0041B0D7 /* PluginMainCocoa.mm in Sources */ = {isa = PBXBuildFile; fileRef = 521A9DC62C163C7B0041B0D7 /* PluginMainCocoa.mm */; };
 		521A9E562C163C7B0041B0D7 /* PluginMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 521A9DC72C163C7B0041B0D7 /* PluginMain.cpp */; };
+		523875702CA09365009205B8 /* SCNMaterialTRC-Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 5238756E2CA09365009205B8 /* SCNMaterialTRC-Plugin.h */; };
+		523875712CA09365009205B8 /* SCNMaterialTRC-Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 5238756E2CA09365009205B8 /* SCNMaterialTRC-Plugin.h */; };
+		523875722CA09365009205B8 /* SCNMaterialTRC-Plugin.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5238756F2CA09365009205B8 /* SCNMaterialTRC-Plugin.mm */; };
+		523875732CA09365009205B8 /* SCNMaterialTRC-Plugin.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5238756F2CA09365009205B8 /* SCNMaterialTRC-Plugin.mm */; };
 		5265F3C82C97554500C4438E /* TinrocketCommon-Plugin-macOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 521A9E6B2C163CB00041B0D7 /* TinrocketCommon-Plugin-macOS.mm */; };
 		5265F3C92C97554900C4438E /* TinrocketCommon-Plugin-iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE4002C30B43F004BC698 /* TinrocketCommon-Plugin-iOS.mm */; };
 		5265F3CA2C97554B00C4438E /* TinrocketCommon-Plugin-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 528A7D952C33876500186058 /* TinrocketCommon-Plugin-iOS.h */; };
@@ -106,6 +110,8 @@
 		521A9E6B2C163CB00041B0D7 /* TinrocketCommon-Plugin-macOS.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = "TinrocketCommon-Plugin-macOS.mm"; sourceTree = "<group>"; };
 		5238756B2C9E10AF009205B8 /* ClassTemplate-Plugin.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "ClassTemplate-Plugin.mm"; sourceTree = "<group>"; };
 		5238756C2C9E10AF009205B8 /* ClassTemplate-Plugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ClassTemplate-Plugin.h"; sourceTree = "<group>"; };
+		5238756E2CA09365009205B8 /* SCNMaterialTRC-Plugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCNMaterialTRC-Plugin.h"; sourceTree = "<group>"; };
+		5238756F2CA09365009205B8 /* SCNMaterialTRC-Plugin.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "SCNMaterialTRC-Plugin.mm"; sourceTree = "<group>"; };
 		526081242C434D0D00DCFB60 /* Plugin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Plugin; sourceTree = "<group>"; };
 		526081292C434DC300DCFB60 /* Build_and_Package_Plugin.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Build_and_Package_Plugin.sh; sourceTree = "<group>"; };
 		526081702C436E4400DCFB60 /* Clean_Builds_Directory.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Clean_Builds_Directory.sh; sourceTree = "<group>"; };
@@ -195,6 +201,7 @@
 				521A9E6B2C163CB00041B0D7 /* TinrocketCommon-Plugin-macOS.mm */,
 				5238756A2C9E10A8009205B8 /* Template */,
 				5265F3F52C97D0AE00C4438E /* Foundation */,
+				5238756D2CA09335009205B8 /* SceneKit */,
 				521A9E6D2C1640DA0041B0D7 /* TRMetalImageView */,
 			);
 			path = "XOJO Tinrocket Common Plugin";
@@ -271,6 +278,15 @@
 			path = Template;
 			sourceTree = "<group>";
 		};
+		5238756D2CA09335009205B8 /* SceneKit */ = {
+			isa = PBXGroup;
+			children = (
+				5238756E2CA09365009205B8 /* SCNMaterialTRC-Plugin.h */,
+				5238756F2CA09365009205B8 /* SCNMaterialTRC-Plugin.mm */,
+			);
+			path = SceneKit;
+			sourceTree = "<group>";
+		};
 		526081272C434D7600DCFB60 /* Build Scripts */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,18 +299,10 @@
 		5265F3F52C97D0AE00C4438E /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				5265F3F62C97D0BC00C4438E /* Plugin */,
-			);
-			path = Foundation;
-			sourceTree = "<group>";
-		};
-		5265F3F62C97D0BC00C4438E /* Plugin */ = {
-			isa = PBXGroup;
-			children = (
 				5265F3FA2C97D0FA00C4438E /* NSValueTRC-Plugin.h */,
 				5265F3F72C97D0ED00C4438E /* NSValueTRC-Plugin.mm */,
 			);
-			path = Plugin;
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 		5299A07B2C97455A0063422B /* Source */ = {
@@ -335,6 +343,7 @@
 				52FCE4102C31E98F004BC698 /* rb_plugin.h in Headers */,
 				521A9E542C163C7B0041B0D7 /* rb_plugin_cocoa.h in Headers */,
 				5265F3CA2C97554B00C4438E /* TinrocketCommon-Plugin-iOS.h in Headers */,
+				523875702CA09365009205B8 /* SCNMaterialTRC-Plugin.h in Headers */,
 				52EE023F2C1795A500771DAA /* TRMetalImageView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,6 +361,7 @@
 				528A7D972C33876500186058 /* TinrocketCommon-Plugin-iOS.h in Headers */,
 				52FCE4232C32E5ED004BC698 /* iOSPrefixHeader.h in Headers */,
 				5265F3FC2C97D0FA00C4438E /* NSValueTRC-Plugin.h in Headers */,
+				523875712CA09365009205B8 /* SCNMaterialTRC-Plugin.h in Headers */,
 				52FCE41F2C32E5E7004BC698 /* TRMetalImageViewLayer.h in Headers */,
 				52FCE4212C32E5E7004BC698 /* TRMetalImageView.h in Headers */,
 			);
@@ -464,6 +474,7 @@
 				5265F3EB2C97CA9000C4438E /* TRMetalImageView-Plugin-iOS.mm in Sources */,
 				521A9E562C163C7B0041B0D7 /* PluginMain.cpp in Sources */,
 				5265F3F82C97D0ED00C4438E /* NSValueTRC-Plugin.mm in Sources */,
+				523875722CA09365009205B8 /* SCNMaterialTRC-Plugin.mm in Sources */,
 				5265F3C92C97554900C4438E /* TinrocketCommon-Plugin-iOS.mm in Sources */,
 				5265F3C82C97554500C4438E /* TinrocketCommon-Plugin-macOS.mm in Sources */,
 				52EE02422C1795A500771DAA /* TRMetalImageView.m in Sources */,
@@ -483,6 +494,7 @@
 				5265F3EC2C97CA9000C4438E /* TRMetalImageView-Plugin-iOS.mm in Sources */,
 				52FCE4272C32E5FA004BC698 /* PluginMain.cpp in Sources */,
 				528A7D982C33876800186058 /* TinrocketCommon-Plugin-macOS.mm in Sources */,
+				523875732CA09365009205B8 /* SCNMaterialTRC-Plugin.mm in Sources */,
 				52FCE4482C32F51C004BC698 /* TinrocketCommon-Plugin-iOS.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
