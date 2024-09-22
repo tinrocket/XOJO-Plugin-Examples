@@ -91,14 +91,14 @@ REALclassDefinition NSValueTRC_Definition = {
 #pragma mark - Implementation
 #pragma mark Shared
 
-REALobject valueWithPointer(void* pointer) {
+REALobject valueWithPointer(void * pointer) {
 	// Create a new instance of your NSValueTRC class
 	REALobject newInstance = REALnewInstanceOfClass(&NSValueTRC_Definition);
 
 	NSValue *value = [NSValue valueWithPointer:pointer];
 	
 	// Set the internal data of the new instance
-	bool r = REALSetPropValuePtr(newInstance, "Handle", &value);
+	bool r = REALSetPropValuePtr(newInstance, "Handle", (void *)CFBridgingRetain(value));
 
 	// Return the new instance wrapping the pointer
 	return newInstance;
