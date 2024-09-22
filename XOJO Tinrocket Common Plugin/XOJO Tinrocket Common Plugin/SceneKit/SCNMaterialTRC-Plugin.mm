@@ -127,6 +127,7 @@ static void SCNMaterialTRC_Finalizer( REALobject instance ) {
 
 #pragma mark Instance
 
+// WIP!
 static void setValueForKey(REALobject instance, REALstring key, id value) {
 	ClassData(SCNMaterialTRC_Definition, instance, SCNMaterialTRC_Data, me);
 	SCNMaterial *material = (SCNMaterial *)me->handle;
@@ -143,6 +144,7 @@ static void setValueForKey(REALobject instance, REALstring key, id value) {
 }
 
 
+// WIP!
 static void * getValueForKey(REALobject instance, REALstring key) {
 	ClassData(SCNMaterialTRC_Definition, instance, SCNMaterialTRC_Data, me);
 	SCNMaterial *material = (SCNMaterial *)me->handle;
