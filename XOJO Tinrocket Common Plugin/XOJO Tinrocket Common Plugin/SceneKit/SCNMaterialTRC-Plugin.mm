@@ -17,7 +17,7 @@ static void SCNMaterialTRC_Initializer( REALobject instance );
 static void SCNMaterialTRC_Finalizer( REALobject instance );
 
 // Instance
-static void setValueForKey(REALobject instance, REALstring key, id value);
+static void setValueForKey(REALobject instance, REALstring key, REALobject value);
 static void * getValueForKey(REALobject instance, REALstring key);
 
 // Shared
@@ -42,8 +42,8 @@ REALproperty SCNMaterialTRC_Properties[] = {
 
 
 REALmethodDefinition SCNMaterialTRC_Methods[] = {
-	{ (REALproc)setValueForKey, REALnoImplementation, "Value(key as Variant, Assigns value as Variant) as Ptr", REALconsoleSafe },
-	{ (REALproc)getValueForKey, REALnoImplementation, "Value(key as Variant) as Variant", REALconsoleSafe },
+	{ (REALproc)setValueForKey, REALnoImplementation, "Value(key as String, Assigns value as Variant)", REALconsoleSafe },
+	{ (REALproc)getValueForKey, REALnoImplementation, "Value(key as String) as Variant", REALconsoleSafe },
 };
 
 
@@ -128,19 +128,17 @@ static void SCNMaterialTRC_Finalizer( REALobject instance ) {
 #pragma mark Instance
 
 // WIP!
-static void setValueForKey(REALobject instance, REALstring key, id value) {
+static void setValueForKey(REALobject instance, REALstring key, REALobject value) {
 	ClassData(SCNMaterialTRC_Definition, instance, SCNMaterialTRC_Data, me);
 	SCNMaterial *material = (SCNMaterial *)me->handle;
 
-	REALstringData stringData;
-
 #if TARGET_CARBON
-	NSLog(@"Hello");
+	NSString *keyNS = (__bridge NSString *)REALCopyStringCFString(key);
+
+	//	NSLog(@"setValueForKey: Length %ld", [keyNS length]);
 #endif
 	
-//	NSString *keyNS = (NSString *)REALCopyStringCFString(key);
-	
-//	[material setValue:value forKey:key];
+//		[material setValue:value forKey:keyNS];
 }
 
 
