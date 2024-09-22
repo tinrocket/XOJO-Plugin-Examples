@@ -9,12 +9,12 @@
 #include "rb_plugin.h"
 #include "TinrocketCommon-Plugin-iOS.h"
 #import "TRMetalImageView-Plugin-iOS.h"
-#import "TRFoundation-Plugin.h"
+#import "NSValueTRC-Plugin.h"
 
 
 void RegisteriOSPlugin( void ) {
 	// Cross-platform
-	RegisterTRFoundation();
+	Register_NSValueTRC();
 
 	// iOS
 	RegisterTRMetalImageView_iOS();

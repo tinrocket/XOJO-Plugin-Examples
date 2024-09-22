@@ -9,7 +9,7 @@
 #include "rb_plugin.h"
 #include "TinrocketCommon-Plugin-iOS.h"
 #import "TRMetalImageView-Plugin-macOS.h"
-#import "TRFoundation-Plugin.h"
+#import "NSValueTRC-Plugin.h"
 
 
 
@@ -27,7 +27,7 @@
 
 void PluginEntry( void ) {
 	// Cross-platform
-	RegisterTRFoundation();
+	Register_NSValueTRC();
 
 	// macOS
 	RegisterTRMetalImageView_macOS();
