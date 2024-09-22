@@ -133,6 +133,10 @@ static void setValueForKey(REALobject instance, REALstring key, id value) {
 
 	REALstringData stringData;
 
+#if TARGET_CARBON
+	NSLog(@"Hello");
+#endif
+	
 //	NSString *keyNS = (NSString *)REALCopyStringCFString(key);
 	
 //	[material setValue:value forKey:key];
