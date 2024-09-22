@@ -132,11 +132,11 @@ static void setValueForKey(REALobject instance, REALstring key, REALobject value
 	ClassData(SCNMaterialTRC_Definition, instance, SCNMaterialTRC_Data, me);
 	SCNMaterial *material = (SCNMaterial *)me->handle;
 
-#if TARGET_CARBON
+//#if TARGET_CARBON
 	NSString *keyNS = (__bridge NSString *)REALCopyStringCFString(key);
 
 	//	NSLog(@"setValueForKey: Length %ld", [keyNS length]);
-#endif
+//#endif
 	
 //		[material setValue:value forKey:keyNS];
 }
