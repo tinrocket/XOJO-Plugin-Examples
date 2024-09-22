@@ -16,7 +16,7 @@
 // Instance
 static void NSValueTRC_Initializer( REALobject instance );
 static void NSValueTRC_Finalizer( REALobject instance );
-static REALobject pointerValue();
+static void * pointerValue(REALobject instance);
 
 // Shared
 static REALobject valueWithPointer(void* pointer);
@@ -39,7 +39,7 @@ REALproperty NSValueTRC_Properties[] = {
 
 
 REALmethodDefinition NSValueTRC_Methods[] = {
-	{ (REALproc)valueWithPointer, REALnoImplementation, "pointerValue() as Ptr", REALconsoleSafe },
+	{ (REALproc)pointerValue, REALnoImplementation, "pointerValue() as Ptr", REALconsoleSafe },
 };
 
 
@@ -91,18 +91,26 @@ REALclassDefinition NSValueTRC_Definition = {
 #pragma mark - Implementation
 #pragma mark Shared
 
-REALobject valueWithPointer(void * pointer) {
+REALobject valueWithPointer(void *pointer) {
 	// Create a new instance of your NSValueTRC class
 	REALobject newInstance = REALnewInstanceOfClass(&NSValueTRC_Definition);
 
+	// Create an NSValue object to wrap the pointer
 	NSValue *value = [NSValue valueWithPointer:pointer];
-	
-	// Set the internal data of the new instance
-	bool r = REALSetPropValuePtr(newInstance, "Handle", (void *)CFBridgingRetain(value));
 
-	// Return the new instance wrapping the pointer
+	// Get the instance data using the ClassData macro
+	ClassData(NSValueTRC_Definition, newInstance, NSValueTRC_Data, me);
+
+	// Set the NSValue object to the handle field
+	me->handle = value;
+	
+	NSLog(@"Original pointer: %p", pointer);
+	NSLog(@"NSValue stored pointer: %p", [value pointerValue]);
+
+	// Return the new instance
 	return newInstance;
 }
+
 
 
 #pragma mark Instance
@@ -125,11 +133,17 @@ static void NSValueTRC_Finalizer( REALobject instance ) {
 }
 
 
-static void * pointerValue( REALobject instance ) {
+static void * pointerValue(REALobject instance) {
+	// Get the instance data using the ClassData macro
 	ClassData(NSValueTRC_Definition, instance, NSValueTRC_Data, me);
 
+	// Retrieve the NSValue object stored in 'handle'
 	NSValue *value = (NSValue *)me->handle;
-	
+
+	// Log the pointer retrieved from NSValue
+	NSLog(@"NSValue pointer retrieved: %p", [value pointerValue]);
+
+	// Return the pointer value stored in NSValue
 	return [value pointerValue];
 }
 
