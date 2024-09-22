@@ -13,8 +13,12 @@
 
 
 
+// Instance
 static void NSValueTRC_Initializer( REALobject instance );
 static void NSValueTRC_Finalizer( REALobject instance );
+static REALobject pointerValue();
+
+// Shared
 static REALobject valueWithPointer(void* pointer);
 
 
@@ -31,19 +35,11 @@ REALconstant NSValueTRC_Constants[] = {
 
 REALproperty NSValueTRC_Properties[] = {
 	{ "", "Handle", "Ptr", REALconsoleSafe, REALstandardGetter, REALstandardSetter, FieldOffset( NSValueTRC_Data, handle ) },
-//	{ "", "CatName", "String", REALconsoleSafe, REALstandardGetter, REALstandardSetter, FieldOffset( TestClassData, mCatName ) },
-//	{ "", "CatName", "String", REALconsoleSafe, REALstandardGetter, REALstandardSetter, FieldOffset( TestClassData, mCatName ) },
-//	{ "", "HumanName", "String", REALconsoleSafe, (REALproc)HumanNameGetter, nil },
-//	{ "", "MooseName", "String", REALconsoleSafe, (REALproc)MooseNameGetter, (REALproc)MooseNameSetter },
-//	{ "", "MooseWeight", "UInt32", REALconsoleSafe, REALstandardGetter, nil, FieldOffset( TestClassData, mMooseWeight ) },
 };
 
 
 REALmethodDefinition NSValueTRC_Methods[] = {
-//	{ (REALproc)PlayWithCat, REALnoImplementation, "PlayWithCat( toyName as String )", REALconsoleSafe },
-//	{ (REALproc)PlayWithMoose, REALnoImplementation, "PlayWithMoose() as String", REALconsoleSafe },
-//	{ (REALproc)ThrowMonkey, REALnoImplementation, "ThrowMonkey( i as Integer )", REALconsoleSafe },
-//	{ (REALproc)MyGetString, REALnoImplementation, "GetString() as String", REALconsoleSafe },
+	{ (REALproc)valueWithPointer, REALnoImplementation, "pointerValue() as Ptr", REALconsoleSafe },
 };
 
 
@@ -93,6 +89,23 @@ REALclassDefinition NSValueTRC_Definition = {
 
 
 #pragma mark - Implementation
+#pragma mark Shared
+
+REALobject valueWithPointer(void* pointer) {
+	// Create a new instance of your NSValueTRC class
+	REALobject newInstance = REALnewInstanceOfClass(&NSValueTRC_Definition);
+
+	NSValue *value = [NSValue valueWithPointer:pointer];
+	
+	// Set the internal data of the new instance
+	bool r = REALSetPropValuePtr(newInstance, "Handle", &value);
+
+	// Return the new instance wrapping the pointer
+	return newInstance;
+}
+
+
+#pragma mark Instance
 
 // Initializes the data for our TestClass object
 static void NSValueTRC_Initializer( REALobject instance ) {
@@ -112,17 +125,12 @@ static void NSValueTRC_Finalizer( REALobject instance ) {
 }
 
 
-REALobject valueWithPointer(void* pointer) {
-	// Create a new instance of your NSValueTRC class
-	REALobject newInstance = REALnewInstanceOfClass(&NSValueTRC_Definition);
+static void * pointerValue( REALobject instance ) {
+	ClassData(NSValueTRC_Definition, instance, NSValueTRC_Data, me);
 
-	NSValue *value = [NSValue valueWithPointer:pointer];
+	NSValue *value = (NSValue *)me->handle;
 	
-	// Set the internal data of the new instance
-	bool r = REALSetPropValuePtr(newInstance, "Handle", &value);
-
-	// Return the new instance wrapping the pointer
-	return newInstance;
+	return [value pointerValue];
 }
 
 

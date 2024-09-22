@@ -14,7 +14,7 @@
 
 void RegisteriOSPlugin( void ) {
 	// Cross-platform
-	Register_NSValueTRC();
+//	Register_NSValueTRC();
 
 	// iOS
 	RegisterTRMetalImageView_iOS();
