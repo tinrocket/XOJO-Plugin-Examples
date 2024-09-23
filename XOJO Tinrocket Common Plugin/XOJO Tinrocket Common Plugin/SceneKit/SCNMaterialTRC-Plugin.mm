@@ -10,6 +10,21 @@
 #include "rb_plugin.h"
 #import "SCNMaterialTRC-Plugin.h"
 #import <SceneKit/SceneKit.h>
+#import "NSValueTRC-Plugin.h"
+
+
+
+/*
+static CFStringRef REALCopyStringCFStringTR( REALstring str );
+CFStringRef REALCopyStringCFStringTR( REALstring str ) {
+	static CFStringRef (*pGetStringCFString)(REALstring, RBBoolean) = nil;
+	if (!pGetStringCFString)
+		pGetStringCFString = (CFStringRef (*)(REALstring, RBBoolean)) CallResolver("REALGetStringCFString");
+	if (pGetStringCFString) return pGetStringCFString(str, false);
+	else return (CFStringRef)0;
+}
+*/
+
 
 
 // Lifecycle
@@ -42,8 +57,8 @@ REALproperty SCNMaterialTRC_Properties[] = {
 
 
 REALmethodDefinition SCNMaterialTRC_Methods[] = {
-	{ (REALproc)setValueForKey, REALnoImplementation, "Value(key as String, Assigns value as Variant)", REALconsoleSafe },
-	{ (REALproc)getValueForKey, REALnoImplementation, "Value(key as String) as Variant", REALconsoleSafe },
+	{ (REALproc)setValueForKey, REALnoImplementation, "Value(key as String, Assigns value as NSValueTRC)", REALconsoleSafe },
+	{ (REALproc)getValueForKey, REALnoImplementation, "Value(key as String) as NSValueTRC", REALconsoleSafe },
 };
 
 
@@ -132,13 +147,13 @@ static void setValueForKey(REALobject instance, REALstring key, REALobject value
 	ClassData(SCNMaterialTRC_Definition, instance, SCNMaterialTRC_Data, me);
 	SCNMaterial *material = (SCNMaterial *)me->handle;
 
-//#if TARGET_CARBON
+#if TARGET_CARBON
 	NSString *keyNS = (__bridge NSString *)REALCopyStringCFString(key);
 
 	//	NSLog(@"setValueForKey: Length %ld", [keyNS length]);
-//#endif
+#endif
 	
-//		[material setValue:value forKey:keyNS];
+//	[material setValue:value forKey:keyNS];
 }
 
 
