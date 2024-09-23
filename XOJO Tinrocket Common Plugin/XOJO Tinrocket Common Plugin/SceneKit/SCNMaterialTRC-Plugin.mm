@@ -142,25 +142,47 @@ static void SCNMaterialTRC_Finalizer( REALobject instance ) {
 
 #pragma mark Instance
 
+
+NSString * convertREALstringToNSString(REALstring rsString) {
+	NSString *nsString = @"";
+
+	size_t len = REALStringLength(rsString);
+	uint32_t enc = REALGetStringEncoding(rsString);
+
+	REALstringData data;
+	bool v = REALGetStringData(rsString, enc, &data);
+	if (v) {
+		const unichar *c = (unichar *)data.data;
+		NSStringEncoding nsEnc = NSUTF8StringEncoding;
+		
+		switch (enc) {
+			// Note: Incomplete list of conversions
+			case kREALTextEncodingUTF16LE: // Silicon and Intel
+				nsEnc = NSUTF16LittleEndianStringEncoding;
+				break;
+
+			case kREALTextEncodingASCII:
+				nsEnc = NSASCIIStringEncoding;
+				break;
+			
+			default:
+				break;
+		}
+		nsString = [[NSString alloc] initWithBytes:data.data length:len encoding:nsEnc];
+	}
+	
+	return nsString;
+}
+
+
 // WIP!
 static void setValueForKey(REALobject instance, REALstring key, REALobject value) {
 	ClassData(SCNMaterialTRC_Definition, instance, SCNMaterialTRC_Data, me);
 	SCNMaterial *material = (SCNMaterial *)me->handle;
 
 	
-	size_t len = REALStringLength(key);
-	uint32_t enc = REALGetStringEncoding(key);
-	
-	NSString *string = @"";
-
-	REALstringData data;
-	bool v = REALGetStringData( key, enc, &data);
-	if (v) {
-		const unichar *c = (unichar *)data.data;
-		string = [[NSString alloc] initWithBytes:data.data length:len encoding:NSUTF8StringEncoding];
-	}
-	
-	NSLog(@"REALstring -> NSString = %@", string);
+	NSString *nsString = convertREALstringToNSString(key);
+	NSLog(@"REALstring -> NSString = %@", nsString);
 
 	
 #if TARGET_CARBON
