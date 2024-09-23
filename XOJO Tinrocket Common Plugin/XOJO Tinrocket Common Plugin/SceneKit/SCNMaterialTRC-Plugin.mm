@@ -147,8 +147,24 @@ static void setValueForKey(REALobject instance, REALstring key, REALobject value
 	ClassData(SCNMaterialTRC_Definition, instance, SCNMaterialTRC_Data, me);
 	SCNMaterial *material = (SCNMaterial *)me->handle;
 
+	
+	size_t len = REALStringLength(key);
+	uint32_t enc = REALGetStringEncoding(key);
+	
+	NSString *string = @"";
+
+	REALstringData data;
+	bool v = REALGetStringData( key, enc, &data);
+	if (v) {
+		const unichar *c = (unichar *)data.data;
+		string = [[NSString alloc] initWithBytes:data.data length:len encoding:NSUTF8StringEncoding];
+	}
+	
+	NSLog(@"REALstring -> NSString = %@", string);
+
+	
 #if TARGET_CARBON
-	NSString *keyNS = (__bridge NSString *)REALCopyStringCFString(key);
+//	NSString *keyNS = (__bridge NSString *)REALCopyStringCFString(key);
 
 	//	NSLog(@"setValueForKey: Length %ld", [keyNS length]);
 #endif
