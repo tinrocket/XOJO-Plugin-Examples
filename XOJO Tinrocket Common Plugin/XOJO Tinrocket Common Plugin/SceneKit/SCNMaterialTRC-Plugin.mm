@@ -180,10 +180,10 @@ static void setValueForKey(REALobject instance, REALstring key, REALobject value
 	ClassData(SCNMaterialTRC_Definition, instance, SCNMaterialTRC_Data, me);
 	SCNMaterial *material = (SCNMaterial *)me->handle;
 
-	
 	NSString *nsString = convertREALstringToNSString(key);
-	NSLog(@"REALstring -> NSString = %@", nsString);
-
+//	NSLog(@"REALstring -> NSString = %@", nsString);
+	
+	
 	
 #if TARGET_CARBON
 //	NSString *keyNS = (__bridge NSString *)REALCopyStringCFString(key);
