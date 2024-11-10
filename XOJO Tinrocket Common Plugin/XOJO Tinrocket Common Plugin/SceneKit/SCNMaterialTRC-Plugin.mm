@@ -25,6 +25,11 @@ CFStringRef REALCopyStringCFStringTR( REALstring str ) {
 }
 */
 
+static void MessageBox(REALstring str) {
+	typedef void (*FuncTy)(REALstring);
+	FuncTy fp = (FuncTy)REALLoadFrameworkMethod("MsgBox(s As String)");
+	if (fp) fp(str);
+}
 
 
 // Lifecycle
@@ -57,8 +62,8 @@ REALproperty SCNMaterialTRC_Properties[] = {
 
 
 REALmethodDefinition SCNMaterialTRC_Methods[] = {
-	{ (REALproc)setValueForKey, REALnoImplementation, "Value(key as String, Assigns value as NSValueTRC)", REALconsoleSafe },
-	{ (REALproc)getValueForKey, REALnoImplementation, "Value(key as String) as NSValueTRC", REALconsoleSafe },
+	{ (REALproc)setValueForKey, REALnoImplementation, "Value(key as String, Assigns value as Variant)", REALconsoleSafe },
+	{ (REALproc)getValueForKey, REALnoImplementation, "Value(key as String) as Variant", REALconsoleSafe },
 };
 
 
@@ -180,18 +185,36 @@ static void setValueForKey(REALobject instance, REALstring key, REALobject value
 	ClassData(SCNMaterialTRC_Definition, instance, SCNMaterialTRC_Data, me);
 	SCNMaterial *material = (SCNMaterial *)me->handle;
 
-	NSString *nsString = convertREALstringToNSString(key);
-//	NSLog(@"REALstring -> NSString = %@", nsString);
-	
-	
+	NSString *keyNS = convertREALstringToNSString(key);
+//	NSLog(@"REALstring -> NSString = %@", keyNS);
 	
 #if TARGET_CARBON
 //	NSString *keyNS = (__bridge NSString *)REALCopyStringCFString(key);
-
-	//	NSLog(@"setValueForKey: Length %ld", [keyNS length]);
+//	NSLog(@"setValueForKey: Length %ld", [keyNS length]);
 #endif
 	
-//	[material setValue:value forKey:keyNS];
+	/*
+	// We'll stuff the string value into this variable
+	REALstring str = nil;
+
+	// Attempt to get the StringValue "property" of
+	// the variant object.  If it works, it'll stuff
+	// the value into our str variable.
+	if (REALGetPropValueString( value, "StringValue", &str )) {
+		
+		// Display the string value to the user
+		MessageBox( str );
+
+		// Release the string's memory so that we
+		// don't cause a leak
+		REALUnlockString( str );
+	}
+	*/
+	
+	double doubleValue = 0.0;
+	if (REALGetPropValueDouble(value, "DoubleValue", &doubleValue)) {
+		[material setValue:@(doubleValue) forKey:keyNS];
+	}
 }
 
 
