@@ -48,7 +48,7 @@ static void * getValueForKey(REALobject instance, REALstring key);
 #pragma mark - Structures
 
 struct SCNMaterialTRC_Data {
-	NSValue *handle;
+	void *handle;
 };
 
 
@@ -121,8 +121,7 @@ REALobject valueWithPointer(void *pointer) {
 	// Get the instance data using the ClassData macro
 	ClassData(SCNMaterialTRC_Definition, newInstance, SCNMaterialTRC_Data, me);
 
-	NSValue *value = [NSValue valueWithPointer:pointer];
-	me->handle = value;
+	me->handle = pointer;
 	
 	return newInstance;
 }
@@ -134,7 +133,7 @@ REALobject valueWithPointer(void *pointer) {
 static void SCNMaterialTRC_Initializer( REALobject instance ) {
 	ClassData(SCNMaterialTRC_Definition, instance, SCNMaterialTRC_Data, me);
 
-	me->handle = [NSValue new];
+	me->handle = nil;
 }
 
 
@@ -183,15 +182,13 @@ NSString * convertREALstringToNSString(REALstring rsString) {
 // WIP!
 static void setValueForKey(REALobject instance, REALstring key, REALobject value) {
 	ClassData(SCNMaterialTRC_Definition, instance, SCNMaterialTRC_Data, me);
-	SCNMaterial *material = (SCNMaterial *)me->handle;
+	SCNMaterial *material = (__bridge SCNMaterial *)me->handle;
 
+	if (material == nil)
+		return;
+	
 	NSString *keyNS = convertREALstringToNSString(key);
 //	NSLog(@"REALstring -> NSString = %@", keyNS);
-	
-#if TARGET_CARBON
-//	NSString *keyNS = (__bridge NSString *)REALCopyStringCFString(key);
-//	NSLog(@"setValueForKey: Length %ld", [keyNS length]);
-#endif
 	
 	/*
 	// We'll stuff the string value into this variable
@@ -214,6 +211,8 @@ static void setValueForKey(REALobject instance, REALstring key, REALobject value
 	double doubleValue = 0.0;
 	if (REALGetPropValueDouble(value, "DoubleValue", &doubleValue)) {
 		[material setValue:@(doubleValue) forKey:keyNS];
+		
+//		NSLog(@"setValueForKey: %@ = %f", keyNS, doubleValue);
 	}
 }
 
@@ -221,9 +220,14 @@ static void setValueForKey(REALobject instance, REALstring key, REALobject value
 // WIP!
 static void * getValueForKey(REALobject instance, REALstring key) {
 	ClassData(SCNMaterialTRC_Definition, instance, SCNMaterialTRC_Data, me);
-	SCNMaterial *material = (SCNMaterial *)me->handle;
+	SCNMaterial *material = (__bridge SCNMaterial *)me->handle;
 
+	if (material == nil)
+		return nil;
+
+//	NSString *keyNS = convertREALstringToNSString(key);
 //	return [material valueForKey:key];
+	
 	return nil;
 }
 
